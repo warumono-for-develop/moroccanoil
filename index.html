@@ -23,19 +23,27 @@
                         colors: {
                             clifford: '#da373d',
                         },
+                        zIndex: {
+                            100: '100',
+                            999: '999',
+                        },
                     },
                 },
             };
         </script>
     </head>
     <body>
-        <header>
-            <h1>warumono</h1>
+        <header class="fixed w-full top-0 z-999">
+            <!-- <h1>warumono</h1>
             <span class="switcher theme-switcher">
                 <input type="checkbox" id="theme-switcher" />
                 <label for="theme-switcher"></label>
-            </span>
-            <span><i class="fa-solid fa-sliders fa-2x"></i></span>
+            </span> -->
+            <div class="content-wrapper w-full flex justify-between items-center">
+                <span class="p-4"><i class="fa-solid fa-power-off fa-2x"></i></span>
+                <span class="p-4 text-4xl">모로칸오일 OX 퀴즈</span>
+                <span class="p-4"><i class="fa-solid fa-sliders fa-2x"></i></span>
+            </div>
         </header>
         <!-- <div class="flip flip-vertical">
             <div class="front" style="background-image: url(https://images.pexels.com/photos/38136/pexels-photo-38136.jpeg?w=1260&h=750&dpr=2&auto=compress&cs=tinysrgb)">
@@ -46,7 +54,7 @@
                <p>Good tools make application development quicker and easier to maintain than if you did everything by hand..</p>
             </div>
         </div> -->
-        <main class="text-white">
+        <main class="text-center text-black">
             <!-- <div class="flip flip-vertical">
                 <div class="front"> -->
             <!-- <div>
@@ -55,17 +63,41 @@
                     </div> -->
 
             <!-- Slider main container -->
-            <div class="swiper-container">
+            <div class="swiper-container w-full h-full overflow-x-hidden">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide color-1">
-                        <div class="content-wrapper" style="width: 90%; height: 85%; border-radius: 1rem; background-color: white">
-                            <div class="content-header">aaa</div>
-                            <div class="content-main"><i class="fa-solid fa-star"></i></div>
-                            <div class="content-footer">ccc</div>
+                    <div class="swiper-slide flex justify-center items-center bg-[#02C3C2]">
+                        <div class="content-wrapper flex flex-wrap w-full h-[80%] m-[4rem] p-14 rounded-3xl bg-white">
+                            <!-- <div class="content flex flex-col"> -->
+                            <div class="header w-full flex flex-col text-6xl">모로칸오일 바디&헤어 미스트 인 브룸드 마로크 상품은 한가지 향만 출시되어있다.</div>
+                            <div class="main w-full flex flex-col"><i class="fa-solid fa-star"></i></div>
+                            <div class="footer w-full flex flex-col">
+                                <div class="inline">
+                                    <div class="flex justify-around text-[8rem]">
+                                        <!-- <button class="bubbly-button bg-transparent text-[#02C3C2] font-bold px-12 py-2 border border-[#02C3C2] rounded-full">O</button> -->
+                                        <button class="bubbly-button bg-[#02C3C2] text-white font-bold px-12 py-2 border border-[#02C3C2] rounded-full">O</button>
+                                        <button class="bg-transparent text-[#f68534] font-bold px-12 py-2 border border-[#f68534] rounded-full">X</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- </div> -->
                         </div>
-                        <img src="img/logo.png" alt="moroccanoil" style="position: absolute; bottom: 1.5rem; width: auto; height: 2rem; padding: 0; margin: 0" />
                     </div>
-                    <div class="swiper-slide color-2">Slide 2</div>
+                    <div class="swiper-slide flex justify-center items-center bg-[#02C3C2]">
+                        <div class="content-wrapper flex flex-wrap w-full h-[80%] m-[4rem] p-14 rounded-3xl bg-white">
+                            <!-- <div class="content flex flex-col"> -->
+                            <div class="header w-full flex flex-col text-6xl">모로칸오일 핸드워시에는 아르간오일, 히알루론산이 함유되어 세정하는 동안에도 영양을 공급하는 상품이다</div>
+                            <div class="main w-full flex flex-col"><i class="fa-solid fa-star"></i></div>
+                            <div class="footer w-full flex flex-col">
+                                <div class="inline">
+                                    <div class="flex justify-around text-[8rem]">
+                                        <button class="bg-transparent text-[#02C3C2] font-bold px-12 py-2 border border-[#02C3C2] rounded-full">O</button>
+                                        <button class="bg-transparent text-[#f57e21] font-bold px-12 py-2 border border-[#f57e21] rounded-full">X</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- </div> -->
+                        </div>
+                    </div>
                     <div class="swiper-slide color-3">Slide 3</div>
                     <div class="swiper-slide color-4">Slide 4</div>
                     <div class="swiper-slide color-5">Slide 5</div>
@@ -90,6 +122,12 @@
                 <p>Good tools make application development quicker and easier to maintain than if you did everything by hand..</p>
             </div> -->
         </main>
+
+        <footer class="fixed w-full bottom-0 z-999">
+            <div class="content-wrapper w-full flex justify-center items-center align-middle p-4">
+                <img class="h-10" src="img/logo.png" alt="moroccanoil" />
+            </div>
+        </footer>
 
         <script src="https://code.jquery.com/jquery-latest.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
@@ -147,6 +185,25 @@
                         $que.appendTo($dup);
                     });
                 };
+
+                /* button - begin */
+                var animateButton = function (e) {
+                    e.preventDefault;
+                    //reset animation
+                    e.target.classList.remove('animate');
+
+                    e.target.classList.add('animate');
+                    setTimeout(function () {
+                        e.target.classList.remove('animate');
+                    }, 700);
+                };
+
+                var bubblyButtons = document.getElementsByClassName('bubbly-button');
+
+                for (var i = 0; i < bubblyButtons.length; i++) {
+                    bubblyButtons[i].addEventListener('click', animateButton, false);
+                }
+                /* button - e n d */
             });
         </script>
     </body>
