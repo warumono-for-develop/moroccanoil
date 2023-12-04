@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>scatfold</title>
+        <link href="css/style.css" rel="stylesheet" />
+        <style type="text/tailwindcss">
+            @layer utilities {
+                .content-auto {
+                    content-visibility: auto;
+                }
+            }
+        </style>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script>
+            tailwind.config = {
+                theme: {
+                    extend: {
+                        colors: {
+                            clifford: '#da373d',
+                        },
+                    },
+                },
+            };
+        </script>
+    </head>
+    <body>
+        <header>
+            <h1>warumono</h1>
+            <span class="switcher theme-switcher">
+                <input type="checkbox" id="theme-switcher" />
+                <label for="theme-switcher"></label>
+            </span>
+            <span>settings</span>
+        </header>
+
+        <main class="text-white">
+            <div>
+                <h1>Welcome to our Index.html File</h1>
+                <p>This is where the content should go</p>
+            </div>
+        </main>
+
+        <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+        <script>
+            $(() => {
+                console.info('i`m ready!');
+
+                /* theme switcher - begin */
+                $('body').toggleClass('day-background');
+                $('#theme-switcher').change(() => {
+                    $('body').toggleClass('day-background');
+                });
+                /* theme switcher - e n d */
+            });
+        </script>
+    </body>
+</html>
