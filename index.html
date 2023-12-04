@@ -3,8 +3,11 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>scatfold</title>
-        <link href="css/style.css" rel="stylesheet" />
+        <title>moroccanoil quiz</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+        <link rel="stylesheet" href="assets/fontawesome/css/fontawesome.min.css" />
+        <link rel="stylesheet" href="assets/fontawesome/css/solid.min.css" />
+        <link rel="stylesheet" href="css/style.css" />
         <style type="text/tailwindcss">
             @layer utilities {
                 .content-auto {
@@ -32,17 +35,67 @@
                 <input type="checkbox" id="theme-switcher" />
                 <label for="theme-switcher"></label>
             </span>
-            <span>settings</span>
+            <span><i class="fa-solid fa-sliders fa-2x"></i></span>
         </header>
-
-        <main class="text-white">
-            <div>
-                <h1>Welcome to our Index.html File</h1>
-                <p>This is where the content should go</p>
+        <!-- <div class="flip flip-vertical">
+            <div class="front" style="background-image: url(https://images.pexels.com/photos/38136/pexels-photo-38136.jpeg?w=1260&h=750&dpr=2&auto=compress&cs=tinysrgb)">
+               <h1 class="text-shadow">FOREST</hi>
             </div>
+            <div class="back">
+               <h2>Angular</h2>
+               <p>Good tools make application development quicker and easier to maintain than if you did everything by hand..</p>
+            </div>
+        </div> -->
+        <main class="text-white">
+            <!-- <div class="flip flip-vertical">
+                <div class="front"> -->
+            <!-- <div>
+                        <h1>Welcome to our Index.html File</h1>
+                        <p>This is where the content should go</p>
+                    </div> -->
+
+            <!-- Slider main container -->
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide color-1">
+                        <div class="content-wrapper" style="width: 90%; height: 85%; border-radius: 1rem; background-color: white">
+                            <div class="content-header">aaa</div>
+                            <div class="content-main"><i class="fa-solid fa-star"></i></div>
+                            <div class="content-footer">ccc</div>
+                        </div>
+                        <img src="img/logo.png" alt="moroccanoil" style="position: absolute; bottom: 1.5rem; width: auto; height: 2rem; padding: 0; margin: 0" />
+                    </div>
+                    <div class="swiper-slide color-2">Slide 2</div>
+                    <div class="swiper-slide color-3">Slide 3</div>
+                    <div class="swiper-slide color-4">Slide 4</div>
+                    <div class="swiper-slide color-5">Slide 5</div>
+                </div>
+
+                <!-- If we need pagination -->
+                <div class="swiper-pagination"></div>
+
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+
+                <div class="report-wrapper" style="z-index: 99; background-color: red; position: absolute; bottom: 4rem">
+                    <span class="result"></span>
+                    <span class="result"></span>
+                </div>
+            </div>
+            <!-- </div>
+            </div>
+            <div class="back">
+                <h2>Angular</h2>
+                <p>Good tools make application development quicker and easier to maintain than if you did everything by hand..</p>
+            </div> -->
         </main>
 
         <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <script src="js/data.js"></script>
+        <script src="js/script.js"></script>
         <script>
             $(() => {
                 console.info('i`m ready!');
@@ -53,6 +106,47 @@
                     $('body').toggleClass('day-background');
                 });
                 /* theme switcher - e n d */
+
+                /* swiper - begin */
+                const swiper = new Swiper('.swiper-container', {
+                    slidesPerView: 1,
+                    paginationClickable: true,
+                    parallax: false,
+                    speed: 600,
+                    pagination: '.swiper-pagination',
+                });
+                /* swiper - e n d */
+
+                // console.info(quizzes);
+                const questions = generateQuestions(3);
+                console.log(questions);
+
+                const renderQuestions = ($questions, questions) => {
+                    let $template = $('.template');
+
+                    _.forEach($questions, (o, i) => {
+                        // const $question = $(`.question-${i}`);
+                        // const $number = $question.find('h2');
+                        // const $problem = $question.find('p');
+
+                        const q = questions[i];
+                        // $number.text($question.data('question-index') + 1);
+                        // $problem.text(q.question);
+
+                        const $que = $template.find('.question');
+                        const $dup = $que.clone();
+                        // $dup.data('question-index', i + 1);
+
+                        const $seq = $dup.find('.sequence');
+                        const $pro = $dup.find('.problem');
+
+                        console.info(i, q);
+                        $seq.text(q.identifier);
+                        $pro.text(q.question);
+
+                        $que.appendTo($dup);
+                    });
+                };
             });
         </script>
     </body>
