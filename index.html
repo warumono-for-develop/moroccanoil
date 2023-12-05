@@ -72,16 +72,19 @@
                                 <p class="p-12 break-words leading-relaxed">모로칸오일 핸드크림의 주성분으로 아르간오일 ,코코아버터, 시어버터, 히알루론산이 있으며, 실키하고 부드럽게 수분이 유지되도록 도와준다.</p>
                             </div>
 
-                            <div class="answer w-full h-full flex flex-row bg-gray-500">
-                                <div class="w-[80%] flex justify-center items-center">
-                                    <div class="w-full flex justify-around">
-                                        <button class="w-24 md:w-48 h-24 md:h-48 p-3 md:p-6 text-[4rem] md:text-[10rem] text-[#02C3C2] border-solid border-4 border-[#02C3C2] rounded-full">O</button>
-                                        <button class="w-24 md:w-48 h-24 md:h-48 p-3 md:p-6 text-[4rem] md:text-[9rem] text-[#f68534] border-solid border-4 border-[#f68534] rounded-full">X</button>
+                            <div class="answer flip-box flip flip-vertical w-full h-full flex flex-row bg-gray-500">
+                                <div class="front flex flex-row">
+                                    <div class="w-[80%] flex justify-center items-center">
+                                        <div class="w-full flex justify-around">
+                                            <button class="ox o w-24 md:w-48 h-24 md:h-48 p-3 md:p-6 text-[4rem] md:text-[10rem] text-[#02C3C2] border-solid border-4 border-[#02C3C2] rounded-full">O</button>
+                                            <button class="ox x w-24 md:w-48 h-24 md:h-48 p-3 md:p-6 text-[4rem] md:text-[9rem] text-[#f68534] border-solid border-4 border-[#f68534] rounded-full">X</button>
+                                        </div>
+                                    </div>
+                                    <div class="product w-[20%] h-full mb-10">
+                                        <div class="product-floating h-full bg-contain bg-center bg-no-repeat" style="background-image: url(img/product/airy-moisture-conditioning-treatment.png)"></div>
                                     </div>
                                 </div>
-                                <div class="product w-[20%] h-full mb-10">
-                                    <div class="product-floating h-full bg-contain bg-center bg-no-repeat" style="background-image: url(img/product/airy-moisture-conditioning-treatment.png)"></div>
-                                </div>
+                                <div class="back flex flex-row">xxx</div>
                             </div>
                         </div>
                         <!-- <div class="content-blanker w-full h-[8.8%] !bottom-0 bg-black">&nbsp;</div> -->
@@ -214,7 +217,7 @@
         <script src="js/data.js"></script>
         <script src="js/script.js"></script>
         <script>
-            $(() => {
+            $(function () {
                 console.info('i`m ready!');
 
                 /* theme switcher - begin */
@@ -249,15 +252,16 @@
                 $.each($quizzes, (index, elem) => {
                     // console.info(index, elem);
                     console.info(questions[index].question);
+                    const question = questions[index];
 
-                    $(elem).find('.header').text(questions[index].question);
-                    $(elem).find('.header').text(questions[index].question);
+                    $(elem).find('.question p').text(question.question);
+                    // $(elem).find('.question. p').text(questions[index].question);
 
-                    // $(elem)
-                    //     .find('.product-floating')
-                    //     .css('background-image', (i, old) => {
-                    //         return old.replace('img/product/brumes-du-maroc.png', `img/product/${questions[index].image}`);
-                    //     });
+                    $(elem)
+                        .find('.product-floating')
+                        .css('background-image', (i, old) => {
+                            return old.replace('img/product/brumes-du-maroc.png', `img/product/${question.image}`);
+                        });
                 });
 
                 // const renderQuestions = ($questions, questions) => {
@@ -286,6 +290,56 @@
                 //         $que.appendTo($dup);
                 //     });
                 // };
+
+                /* button - begin */
+                // let $button = $('button');
+
+                // $button.on('click', function () {
+                //     var $this = $(this).closest('.quiz');
+                //     const text = $this.text();
+                //     if ($this.hasClass('active') || $this.hasClass('success')) {
+                //         return false;
+                //     }
+                //     $this.addClass('active');
+                //     // setTimeout(() => {
+                //     //     $this.addClass('loader');
+                //     // }, 125);
+                //     setTimeout(() => {
+                //         $this.removeClass('loader active');
+                //         $this.text('Success');
+                //         $this.addClass('success animated pulse');
+                //     }, 1600);
+                //     setTimeout(() => {
+                //         $this.text(text);
+                //         $this.removeClass('success animated pulse');
+                //         $this.blur();
+                //     }, 2900);
+                // });
+                /* button - e n d */
+
+                /* result - begin */
+                $('.ox').on('click', (e) => {
+                    console.info(111);
+                    $('.ox').removeClass('drop');
+                    $('.answer').removeClass('to-back');
+
+                    const $elem = $(e.target);
+
+                    setTimeout(() => {
+                        const unselected = $elem.hasClass('o') ? '.x' : '.o';
+
+                        $(unselected).addClass('drop');
+                    }, 100);
+
+                    setTimeout(() => {
+                        $('.product').addClass('out right');
+                    }, 300);
+
+                    setTimeout(() => {
+                        $('.answer').addClass('to-back');
+                    }, 500);
+                });
+                /* result - e n d */
 
                 /* xxx - begin */
                 /* xxx - e n d */
