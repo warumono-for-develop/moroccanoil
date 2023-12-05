@@ -68,19 +68,19 @@
                         <div class="content-blanker w-full h-[6.7%] md:h-[9%] top-0 bg-lime-500">&nbsp;</div>
                         <!-- <div class="content-wrapper w-[90%] h-[89%] md:h-[86%] rounded-3xl leading-10 bg-red-500"> -->
                         <div class="content-wrapper w-full h-[82.2%] md:h-[83.2%] rounded-3xl flex flex-col leading-10 bg-red-500">
-                            <div class="question w-full h-full text-3xl md:text-5xl flex items-center justify-center bg-blue-500">
-                                <p class="p-12 break-words leading-loose">모로칸오일 핸드크림의 주성분으로 아르간오일 ,코코아버터, 시어버터, 히알루론산이 있으며, 실키하고 부드럽게 수분이 유지되도록 도와준다.</p>
+                            <div class="question w-full h-full text-xl md:text-5xl flex items-center justify-center bg-blue-500">
+                                <p class="p-12 break-words leading-relaxed">모로칸오일 핸드크림의 주성분으로 아르간오일 ,코코아버터, 시어버터, 히알루론산이 있으며, 실키하고 부드럽게 수분이 유지되도록 도와준다.</p>
                             </div>
 
                             <div class="answer w-full h-full flex flex-row bg-gray-500">
-                                <div class="inline w-[80%]">
-                                    <div class="flex justify-around">
-                                        <button class="w-48 h-48 p-6 text-[10rem] text-center text-[#02C3C2] border-solid border-4 border-[#02C3C2] rounded-full">O</button>
-                                        <button class="w-48 h-48 p-6 text-[8rem] text-center text-[#f68534] border-solid border-4 border-[#f68534] rounded-full mx-2 md:m-0">X</button>
+                                <div class="w-[80%] flex justify-center items-center">
+                                    <div class="w-full flex justify-around">
+                                        <button class="w-24 md:w-48 h-24 md:h-48 p-3 md:p-6 text-[4rem] md:text-[10rem] text-[#02C3C2] border-solid border-4 border-[#02C3C2] rounded-full">O</button>
+                                        <button class="w-24 md:w-48 h-24 md:h-48 p-3 md:p-6 text-[4rem] md:text-[9rem] text-[#f68534] border-solid border-4 border-[#f68534] rounded-full">X</button>
                                     </div>
                                 </div>
                                 <div class="product w-[20%] h-full mb-10">
-                                    <div class="product-floating h-full" style="background-image: url(img/product/brumes-du-maroc.png); background-size: cover; background-repeat: no-repeat"></div>
+                                    <div class="product-floating h-full bg-contain bg-center bg-no-repeat" style="background-image: url(img/product/airy-moisture-conditioning-treatment.png)"></div>
                                 </div>
                             </div>
                         </div>
@@ -253,11 +253,11 @@
                     $(elem).find('.header').text(questions[index].question);
                     $(elem).find('.header').text(questions[index].question);
 
-                    $(elem)
-                        .find('.product-floating')
-                        .css('background-image', (i, old) => {
-                            return old.replace('img/product/brumes-du-maroc.png', `img/product/${questions[index].image}`);
-                        });
+                    // $(elem)
+                    //     .find('.product-floating')
+                    //     .css('background-image', (i, old) => {
+                    //         return old.replace('img/product/brumes-du-maroc.png', `img/product/${questions[index].image}`);
+                    //     });
                 });
 
                 // const renderQuestions = ($questions, questions) => {
