@@ -25,6 +25,13 @@
     src: url(../fonts/NanumGothic.ttf);
 }
 
+@font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    src: url(../fonts/Poppins-ExtraBold.ttf);
+}
+
 html,
 body,
 main {
@@ -36,7 +43,25 @@ main {
     justify-content: center; */
     /* height: 100vh; */
     /* background-color: #cccccc; */
+    /* font-family: 'Nanum Gothic', sans-serif; */
+}
+
+html,
+body,
+main,
+div,
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+span {
     font-family: 'Nanum Gothic', sans-serif;
+}
+button,
+button span {
+    font-family: 'Poppins', sans-serif !important;
 }
 /* body,
 main {
