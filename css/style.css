@@ -18,12 +18,12 @@
     --text-color: #eee;
 } */
 
-@font-face {
+/* @font-face {
     font-family: 'Nanum Gothic';
     font-style: normal;
     font-weight: 400;
     src: url(../fonts/NanumGothic.ttf);
-}
+} */
 
 @font-face {
     font-family: 'Poppins';
