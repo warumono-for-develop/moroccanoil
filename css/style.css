@@ -155,3 +155,8 @@ body {
 .blink {
     animation: blink 1s step-end infinite;
 }
+
+/* layout */
+.card {
+    opacity: 0.5;
+}
