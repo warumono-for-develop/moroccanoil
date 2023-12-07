@@ -861,7 +861,7 @@
 
                 /* fullscreen - begin */
                 const toggleFullscreen = () => {
-                    let elem = document.querySelector('body');
+                    let elem = document.querySelector('.swiper-container');
 
                     if (!document.fullscreenElement) {
                         elem.requestFullscreen().catch((err) => {
