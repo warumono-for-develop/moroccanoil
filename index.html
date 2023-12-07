@@ -592,7 +592,7 @@
                 /* swiper - e n d */
 
                 const TESTABLE = false;
-                const SPECIFIC = 0; //// if TESTABLE is true then selectable 0 ~ 7
+                const SPECIFIC = 7; //// if TESTABLE is true then selectable 0 ~ 7
                 const JSONABLE = false; //// if TESTABLE is true then print json object
 
                 const QUIZ_COUNT = 5;
@@ -688,10 +688,9 @@
                     $(`${card} .middle .decision .solution`).addClass('tw-hidden');
                     $(`${card} .middle .decision .solution .state .wrong`).removeClass('tw-hidden');
                     $(`${card} .middle .decision .solution .state .correct`).addClass('tw-hidden');
-                    $(`${card} .middle .decision .promotion`).addClass('tw-hidden');
+                    $(`${card} .middle .decision .promotion`).removeClass('tw-hidden');
 
                     $(`${card} .middle .decision .solution .confirm`).addClass('tw-hidden');
-                    // $(`${card} .middle .decision .solution .state label`).addClass('reset');
 
                     $.each($cards, (_cardIndex, _card) => {
                         $(_card)
