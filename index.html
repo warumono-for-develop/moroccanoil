@@ -860,24 +860,12 @@
                 /* move to next - e n d */
 
                 /* fullscreen - begin */
-                const toggleFullscreen = () => {
-                    let elem = document.querySelector('.swiper-container');
-
-                    if (!document.fullscreenElement) {
-                        elem.requestFullscreen().catch((err) => {
-                            alert(`Error attempting to enable fullscreen mode: ${err.message} (${err.name})`);
-                        });
-                    } else {
-                        document.exitFullscreen();
-                    }
-                };
                 /* fullscreen - e n d */
 
                 /* xxx - begin */
                 /* xxx - e n d */
 
                 initialize();
-                toggleFullscreen();
             });
         </script>
     </body>
