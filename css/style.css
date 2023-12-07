@@ -4,9 +4,11 @@
     font-family: 'Nanum Gothic';
     font-style: normal;
     font-weight: 400;
+    src: url('file:///android_asset/FILE_NAME');
     src: url(fonts.gstatic.com/ea/nanumgothic/v5/NanumGothic-Regular.eot);
     src: url(fonts.gstatic.com/ea/nanumgothic/v5/NanumGothic-Regular.eot?#iefix) format('embedded-opentype'), url(fonts.gstatic.com/ea/nanumgothic/v5/NanumGothic-Regular.woff2) format('woff2'), url(//fonts.gstatic.com/ea/nanumgothic/v5/NanumGothic-Regular.woff) format('woff'), url(fonts.gstatic.com/ea/nanumgothic/v5/NanumGothic-Regular.ttf) format('truetype');
 }
+
 /* @font-face {
     font-family: 'Nanum Gothic';
     font-style: normal;
@@ -47,6 +49,7 @@
     user-select: none;
     -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
     -webkit-touch-callout: none;
+}
 
 html,
 body {
