@@ -7,395 +7,575 @@
         <link rel="icon" href="img/favi/favicon.ico" type="image/x-icon" />
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nanum+Gothic" />
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-        <!-- <link rel="stylesheet" href="assets/fontawesome/css/fontawesome.min.css" />
-        <link rel="stylesheet" href="assets/fontawesome/css/solid.min.css" /> -->
         <link rel="stylesheet" href="css/style.css" />
-        <style type="text/tailwindcss">
-            @layer utilities {
-                /* .content-auto {
-                    content-visibility: auto;
-                } */
-            }
-        </style>
-        <script src="https://cdn.tailwindcss.com"></script>
-        <script>
-            tailwind.config = {
-                theme: {
-                    extend: {
-                        colors: {
-                            clifford: '#da373d',
-                        },
-                        zIndex: {
-                            100: '100',
-                            999: '999',
-                        },
-                    },
-                },
-            };
-        </script>
     </head>
-    <body class="bg-[#02C3C2]">
-        <header class="fixed flex w-full top-0 z-999 bg-[#02C3C2]">
-            <div class="content-wrapper w-full py-4 text-center">
-                <span class="text-center text-base md:text-6xl text-white !font-extrabold">모로칸오일 OX 퀴즈</span>
-            </div>
-        </header>
-        <main class="text-center text-yellow-500">
-            <div class="swiper-container w-full h-full overflow-x-hidden">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide quiz quiz-0 w-full flex flex-col px-10 bg-[#02C3C2]" data-index="0">
-                        <div class="content-blanker w-full h-[6.7%] md:h-[9%] top-0">&nbsp;</div>
-                        <div class="content-wrapper w-full h-[82.2%] md:h-[83.2%] rounded-3xl flex flex-col leading-10 bg-white">
-                            <div class="question w-full h-full text-xl md:text-5xl flex items-center justify-center rounded-3xl bg-white">
-                                <p class="p-12 break-words leading-relaxed">모로칸오일 핸드크림의 주성분으로 아르간오일 ,코코아버터, 시어버터, 히알루론산이 있으며, 실키하고 부드럽게 수분이 유지되도록 도와준다.</p>
-                            </div>
+    <body class="bg-app">
+        <div class="swiper-container tw-w-full tw-h-full tw-overflow-x-hidden">
+            <div class="swiper-wrapper">
+                <!--
 
-                            <div class="answer w-full h-full flex flex-row rounded-3xl bg-white">
-                                <div class="front w-full flex flex-row hiddenn">
-                                    <div class="buttons w-[80%] flex justify-center items-center">
-                                        <div class="w-full flex justify-around">
-                                            <button type="button" class="ox o w-24 md:w-48 h-24 md:h-48 p-3 md:p-6 text-[4rem] md:text-[10rem] text-[#02C3C2] border-solid border-4 border-[#02C3C2] rounded-full">O</button>
-                                            <button type="button" class="ox x w-24 md:w-48 h-24 md:h-48 p-3 md:p-6 text-[4rem] md:text-[9rem] text-[#F68534] border-solid border-4 border-[#f68534] rounded-full">X</button>
-                                        </div>
-                                    </div>
-                                    <div class="products flex w-[20%] h-full mb-10">
-                                        <div class="product product-a w-full h-full mb-10">
-                                            <div class="product-floating h-full bg-contain bg-center bg-no-repeat" style="background-image: url(img/product/empty.png)"></div>
-                                        </div>
-                                        <div class="product product-b w-full h-full mb-10 hidden">
-                                            <div class="product-floating h-full bg-contain bg-center bg-no-repeat" style="background-image: url(img/product/empty.png)"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="back w-full flex flex-row hidden">
-                                    <div class="w-full flex justify-center items-center">
-                                        <div class="result o w-full h-[75%] flex flex-col m-2 border-solid border-4 border-[#02C3C2] rounded-3xl hiddenn">
-                                            <div class="p-6 !font-extrabold">
-                                                <div class="w-full text-[2rem] md:text-[4rem] text-[#02C3C2]">정 답 !</div>
-                                            </div>
-                                            <div class="mt-auto">
-                                                <button type="button" class="quiz-next text-white bg-[#F68534] hover:bg-[#F68534] focus:outline-none focus:ring-4 focus:ring-[#F68534] font-medium rounded-[2rem] text-[3rem] px-[3rem] py-4 text-center me-2 mb-2 dark:bg-[#F68534] dark:hover:bg-[#F68534] dark:focus:ring-[#F68534]">다 음</button>
-                                            </div>
-                                        </div>
-                                        <div class="result x w-full flex flex-col m-2 border-solid border-4 border-[#F68534] rounded-3xl hidden">
-                                            <div class="p-6 !font-extrabold">
-                                                <div class="wrong w-full text-[2rem] md:text-[4rem] text-[#F68534] cursor-pointer">오 답 !</div>
-                                            </div>
-                                            <div>
-                                                <div>
-                                                    <div class="inline w-full h-full text-xl md:text-4xl flex items-center justify-center rounded-3xl bg-white">
-                                                        <label class="w-[14rem] text-[2rem] md:text-[4rem] text-[#02C3C2] !font-extrabold">정 답</label>
-                                                        <p class="explanation p-12 break-words leading-relaxed text-xl md:text-5xl"></p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                    :::::::::::::::::::: intro - begin ::::::::::::::::::::
+
+                -->
+                <div class="swiper-slide">
+                    <div class="card tw-grid tw-grid-rows-[1rem_auto_10%] tw-w-screen tw-h-screen tw-bg-app" data-index="0">
+                        <div class="top tw-flex tw-justify-center tw-items-center C-O-N-T-R-O-L---------- tw-bg-blue--200">
+                            <!-- <label class="tw-text-2xl">모로칸오일 OX 퀴즈</label> -->
+                        </div>
+                        <div class="middle tw-flex tw-flex-col tw-border-x-[1rem] tw-border-app">
+                            <div class="tw-flex-auto tw-flex tw-items-center tw-border-x-[1rem] tw-border-white tw-rounded-t-2xl tw-bg-white C-O-N-T-R-O-L---------- tw-bg-yellow--400">
+                                <div class="tw-flex-1 tw-flex tw-justify-around tw-px-[8rem] tw--hidden">
+                                    <button type="button" class="yes tw-w-[5.5rem] tw-h-[5.5rem] tw-text-[3.3rem] tw-text-correct tw-border-solid tw-border-4 tw-border-correct tw-rounded-full" disabled>O</button>
+                                    <button type="button" class="no tw-w-[5.5rem] tw-h-[5.5rem] tw-text-[3.3rem] tw-text-wrong tw-border-solid tw-border-4 tw-border-wrong tw-rounded-full" disabled>X</button>
                                 </div>
                             </div>
-                            <div class="report w-full">
-                                <div class="swiper-pagination-wrap w-full text-center">
-                                    <ol class="swiper-pagination w-full inline-block">
-                                        <li class="swiper-bullet w-[2rem] inline-block m-1"><button class="bg-blue-500" data-page-num="0" title="slide 1"></button></li>
-                                        <li class="swiper-bullet"><button data-page-num="1" title="slide 2"></button></li>
-                                        <li class="swiper-bullet"><button data-page-num="2" title="slide 3"></button></li>
-                                    </ol>
-                                </div>
+                            <div class="tw-flex-1 tw-flex tw-flex-col tw-justify-center tw-items-center tw-bg-white C-O-N-T-R-O-L---------- tw-bg-yellow--600">
+                                <label class="tw-font-medium tw-text-app tw-text-3xl tw-px-5 tw-py-1 tw-text-center">모로칸오일 OX 퀴즈</label>
+                                <label class="testable tw-absolute tw-top-[40%] tw-left-[40%] tw-font-medium tw-text-red-500 tw-text-3xl tw-px-5 tw-py-1 tw-text-center tw-font-poppins blink C-O-N-T-R-O-L---------- tw-hidden">T E S T</label>
+                            </div>
+                            <div class="tw-flex-1 tw-flex tw-justify-center tw-items-center tw-rounded-b-2xl tw-bg-white C-O-N-T-R-O-L---------- tw-bg-yellow--600">
+                                <button type="button" class="next tw-font-medium tw-rounded-2xl tw-text-3xl tw-px-5 tw-py-1 tw-text-center tw-bg-app">문 제 풀 기</button>
                             </div>
                         </div>
-                    </div>
-
-                    <div class="swiper-slide quiz quiz-1 w-full flex flex-col px-10 bg-[#02C3C2]" data-index="1">
-                        <div class="content-blanker w-full h-[6.7%] md:h-[9%] top-0">&nbsp;</div>
-                        <div class="content-wrapper w-full h-[82.2%] md:h-[83.2%] rounded-3xl flex flex-col leading-10 bg-white">
-                            <div class="question w-full h-full text-xl md:text-5xl flex items-center justify-center rounded-3xl bg-white">
-                                <p class="p-12 break-words leading-relaxed">모로칸오일 핸드크림의 주성분으로 아르간오일 ,코코아버터, 시어버터, 히알루론산이 있으며, 실키하고 부드럽게 수분이 유지되도록 도와준다.</p>
-                            </div>
-
-                            <div class="answer w-full h-full flex flex-row rounded-3xl bg-white">
-                                <div class="front w-full flex flex-row hiddenn">
-                                    <div class="buttons w-[80%] flex justify-center items-center">
-                                        <div class="w-full flex justify-around">
-                                            <button type="button" class="ox o w-24 md:w-48 h-24 md:h-48 p-3 md:p-6 text-[4rem] md:text-[10rem] text-[#02C3C2] border-solid border-4 border-[#02C3C2] rounded-full">O</button>
-                                            <button type="button" class="ox x w-24 md:w-48 h-24 md:h-48 p-3 md:p-6 text-[4rem] md:text-[9rem] text-[#F68534] border-solid border-4 border-[#f68534] rounded-full">X</button>
-                                        </div>
-                                    </div>
-                                    <div class="products flex w-[20%] h-full mb-10">
-                                        <div class="product product-a w-full h-full mb-10">
-                                            <div class="product-floating h-full bg-contain bg-center bg-no-repeat" style="background-image: url(img/product/empty.png)"></div>
-                                        </div>
-                                        <div class="product product-b w-full h-full mb-10 hidden">
-                                            <div class="product-floating h-full bg-contain bg-center bg-no-repeat" style="background-image: url(img/product/empty.png)"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="back w-full flex flex-row hidden">
-                                    <div class="w-full flex justify-center items-center">
-                                        <div class="result o w-full h-[75%] flex flex-col m-2 border-solid border-4 border-[#02C3C2] rounded-3xl hiddenn">
-                                            <div class="p-6 !font-extrabold">
-                                                <div class="w-full text-[2rem] md:text-[4rem] text-[#02C3C2]">정 답 !</div>
-                                            </div>
-                                            <div class="mt-auto">
-                                                <button type="button" class="quiz-next text-white bg-[#F68534] hover:bg-[#F68534] focus:outline-none focus:ring-4 focus:ring-[#F68534] font-medium rounded-[2rem] text-[3rem] px-[3rem] py-4 text-center me-2 mb-2 dark:bg-[#F68534] dark:hover:bg-[#F68534] dark:focus:ring-[#F68534]">다 음</button>
-                                            </div>
-                                        </div>
-                                        <div class="result x w-full flex flex-col m-2 border-solid border-4 border-[#F68534] rounded-3xl hidden">
-                                            <div class="p-6 !font-extrabold">
-                                                <div class="wrong w-full text-[2rem] md:text-[4rem] text-[#F68534] cursor-pointer">오 답 !</div>
-                                            </div>
-                                            <div>
-                                                <div>
-                                                    <div class="inline w-full h-full text-xl md:text-4xl flex items-center justify-center rounded-3xl bg-white">
-                                                        <label class="w-[14rem] text-[2rem] md:text-[4rem] text-[#02C3C2] !font-extrabold">정 답</label>
-                                                        <p class="explanation p-12 break-words leading-relaxed text-xl md:text-5xl"></p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="report w-full">
-                                <div class="swiper-pagination-wrap w-full text-center">
-                                    <ol class="swiper-pagination w-full inline-block">
-                                        <li class="swiper-bullet w-[2rem] inline-block m-1"><button class="bg-blue-500" data-page-num="0" title="slide 1"></button></li>
-                                        <li class="swiper-bullet"><button data-page-num="1" title="slide 2"></button></li>
-                                        <li class="swiper-bullet"><button data-page-num="2" title="slide 3"></button></li>
-                                    </ol>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="swiper-slide quiz quiz-2 w-full flex flex-col px-10 bg-[#02C3C2]" data-index="2">
-                        <div class="content-blanker w-full h-[6.7%] md:h-[9%] top-0">&nbsp;</div>
-                        <div class="content-wrapper w-full h-[82.2%] md:h-[83.2%] rounded-3xl flex flex-col leading-10 bg-white">
-                            <div class="question w-full h-full text-xl md:text-5xl flex items-center justify-center rounded-3xl bg-white">
-                                <p class="p-12 break-words leading-relaxed">모로칸오일 핸드크림의 주성분으로 아르간오일 ,코코아버터, 시어버터, 히알루론산이 있으며, 실키하고 부드럽게 수분이 유지되도록 도와준다.</p>
-                            </div>
-
-                            <div class="answer w-full h-full flex flex-row rounded-3xl bg-white">
-                                <div class="front w-full flex flex-row hiddenn">
-                                    <div class="buttons w-[80%] flex justify-center items-center">
-                                        <div class="w-full flex justify-around">
-                                            <button type="button" class="ox o w-24 md:w-48 h-24 md:h-48 p-3 md:p-6 text-[4rem] md:text-[10rem] text-[#02C3C2] border-solid border-4 border-[#02C3C2] rounded-full">O</button>
-                                            <button type="button" class="ox x w-24 md:w-48 h-24 md:h-48 p-3 md:p-6 text-[4rem] md:text-[9rem] text-[#F68534] border-solid border-4 border-[#f68534] rounded-full">X</button>
-                                        </div>
-                                    </div>
-                                    <div class="products flex w-[20%] h-full mb-10">
-                                        <div class="product product-a w-full h-full mb-10">
-                                            <div class="product-floating h-full bg-contain bg-center bg-no-repeat" style="background-image: url(img/product/empty.png)"></div>
-                                        </div>
-                                        <div class="product product-b w-full h-full mb-10 hidden">
-                                            <div class="product-floating h-full bg-contain bg-center bg-no-repeat" style="background-image: url(img/product/empty.png)"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="back w-full flex flex-row hidden">
-                                    <div class="w-full flex justify-center items-center">
-                                        <div class="result o w-full h-[75%] flex flex-col m-2 border-solid border-4 border-[#02C3C2] rounded-3xl hiddenn">
-                                            <div class="p-6 !font-extrabold">
-                                                <div class="w-full text-[2rem] md:text-[4rem] text-[#02C3C2]">정 답 !</div>
-                                            </div>
-                                            <div class="mt-auto">
-                                                <button type="button" class="quiz-next text-white bg-[#F68534] hover:bg-[#F68534] focus:outline-none focus:ring-4 focus:ring-[#F68534] font-medium rounded-[2rem] text-[3rem] px-[3rem] py-4 text-center me-2 mb-2 dark:bg-[#F68534] dark:hover:bg-[#F68534] dark:focus:ring-[#F68534]">다 음</button>
-                                            </div>
-                                        </div>
-                                        <div class="result x w-full flex flex-col m-2 border-solid border-4 border-[#F68534] rounded-3xl hidden">
-                                            <div class="p-6 !font-extrabold">
-                                                <div class="wrong w-full text-[2rem] md:text-[4rem] text-[#F68534] cursor-pointer">오 답 !</div>
-                                            </div>
-                                            <div>
-                                                <div>
-                                                    <div class="inline w-full h-full text-xl md:text-4xl flex items-center justify-center rounded-3xl bg-white">
-                                                        <label class="w-[14rem] text-[2rem] md:text-[4rem] text-[#02C3C2] !font-extrabold">정 답</label>
-                                                        <p class="explanation p-12 break-words leading-relaxed text-xl md:text-5xl"></p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="report w-full">
-                                <div class="swiper-pagination-wrap w-full text-center">
-                                    <ol class="swiper-pagination w-full inline-block">
-                                        <li class="swiper-bullet w-[2rem] inline-block m-1"><button class="bg-blue-500" data-page-num="0" title="slide 1"></button></li>
-                                        <li class="swiper-bullet"><button data-page-num="1" title="slide 2"></button></li>
-                                        <li class="swiper-bullet"><button data-page-num="2" title="slide 3"></button></li>
-                                    </ol>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="swiper-slide quiz quiz-3 w-full flex flex-col px-10 bg-[#02C3C2]" data-index="3">
-                        <div class="content-blanker w-full h-[6.7%] md:h-[9%] top-0">&nbsp;</div>
-                        <div class="content-wrapper w-full h-[82.2%] md:h-[83.2%] rounded-3xl flex flex-col leading-10 bg-white">
-                            <div class="question w-full h-full text-xl md:text-5xl flex items-center justify-center rounded-3xl bg-white">
-                                <p class="p-12 break-words leading-relaxed">모로칸오일 핸드크림의 주성분으로 아르간오일 ,코코아버터, 시어버터, 히알루론산이 있으며, 실키하고 부드럽게 수분이 유지되도록 도와준다.</p>
-                            </div>
-
-                            <div class="answer w-full h-full flex flex-row rounded-3xl bg-white">
-                                <div class="front w-full flex flex-row hiddenn">
-                                    <div class="buttons w-[80%] flex justify-center items-center">
-                                        <div class="w-full flex justify-around">
-                                            <button type="button" class="ox o w-24 md:w-48 h-24 md:h-48 p-3 md:p-6 text-[4rem] md:text-[10rem] text-[#02C3C2] border-solid border-4 border-[#02C3C2] rounded-full">O</button>
-                                            <button type="button" class="ox x w-24 md:w-48 h-24 md:h-48 p-3 md:p-6 text-[4rem] md:text-[9rem] text-[#F68534] border-solid border-4 border-[#f68534] rounded-full">X</button>
-                                        </div>
-                                    </div>
-                                    <div class="products flex w-[20%] h-full mb-10">
-                                        <div class="product product-a w-full h-full mb-10">
-                                            <div class="product-floating h-full bg-contain bg-center bg-no-repeat" style="background-image: url(img/product/empty.png)"></div>
-                                        </div>
-                                        <div class="product product-b w-full h-full mb-10 hidden">
-                                            <div class="product-floating h-full bg-contain bg-center bg-no-repeat" style="background-image: url(img/product/empty.png)"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="back w-full flex flex-row hidden">
-                                    <div class="w-full flex justify-center items-center">
-                                        <div class="result o w-full h-[75%] flex flex-col m-2 border-solid border-4 border-[#02C3C2] rounded-3xl hiddenn">
-                                            <div class="p-6 !font-extrabold">
-                                                <div class="w-full text-[2rem] md:text-[4rem] text-[#02C3C2]">정 답 !</div>
-                                            </div>
-                                            <div class="mt-auto">
-                                                <button type="button" class="quiz-next text-white bg-[#F68534] hover:bg-[#F68534] focus:outline-none focus:ring-4 focus:ring-[#F68534] font-medium rounded-[2rem] text-[3rem] px-[3rem] py-4 text-center me-2 mb-2 dark:bg-[#F68534] dark:hover:bg-[#F68534] dark:focus:ring-[#F68534]">다 음</button>
-                                            </div>
-                                        </div>
-                                        <div class="result x w-full flex flex-col m-2 border-solid border-4 border-[#F68534] rounded-3xl hidden">
-                                            <div class="p-6 !font-extrabold">
-                                                <div class="wrong w-full text-[2rem] md:text-[4rem] text-[#F68534] cursor-pointer">오 답 !</div>
-                                            </div>
-                                            <div>
-                                                <div>
-                                                    <div class="inline w-full h-full text-xl md:text-4xl flex items-center justify-center rounded-3xl bg-white">
-                                                        <label class="w-[14rem] text-[2rem] md:text-[4rem] text-[#02C3C2] !font-extrabold">정 답</label>
-                                                        <p class="explanation p-12 break-words leading-relaxed text-xl md:text-5xl"></p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="report w-full">
-                                <div class="swiper-pagination-wrap w-full text-center">
-                                    <ol class="swiper-pagination w-full inline-block">
-                                        <li class="swiper-bullet w-[2rem] inline-block m-1"><button class="bg-blue-500" data-page-num="0" title="slide 1"></button></li>
-                                        <li class="swiper-bullet"><button data-page-num="1" title="slide 2"></button></li>
-                                        <li class="swiper-bullet"><button data-page-num="2" title="slide 3"></button></li>
-                                    </ol>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="swiper-slide quiz quiz-4 w-full flex flex-col px-10 bg-[#02C3C2]" data-index="4">
-                        <div class="content-blanker w-full h-[6.7%] md:h-[9%] top-0">&nbsp;</div>
-                        <div class="content-wrapper w-full h-[82.2%] md:h-[83.2%] rounded-3xl flex flex-col leading-10 bg-white">
-                            <div class="question w-full h-full text-xl md:text-5xl flex items-center justify-center rounded-3xl bg-white">
-                                <p class="p-12 break-words leading-relaxed">모로칸오일 핸드크림의 주성분으로 아르간오일 ,코코아버터, 시어버터, 히알루론산이 있으며, 실키하고 부드럽게 수분이 유지되도록 도와준다.</p>
-                            </div>
-
-                            <div class="answer w-full h-full flex flex-row rounded-3xl bg-white">
-                                <div class="front w-full flex flex-row hiddenn">
-                                    <div class="buttons w-[80%] flex justify-center items-center">
-                                        <div class="w-full flex justify-around">
-                                            <button type="button" class="ox o w-24 md:w-48 h-24 md:h-48 p-3 md:p-6 text-[4rem] md:text-[10rem] text-[#02C3C2] border-solid border-4 border-[#02C3C2] rounded-full">O</button>
-                                            <button type="button" class="ox x w-24 md:w-48 h-24 md:h-48 p-3 md:p-6 text-[4rem] md:text-[9rem] text-[#F68534] border-solid border-4 border-[#f68534] rounded-full">X</button>
-                                        </div>
-                                    </div>
-                                    <div class="products flex w-[20%] h-full mb-10">
-                                        <div class="product product-a w-full h-full mb-10">
-                                            <div class="product-floating h-full bg-contain bg-center bg-no-repeat" style="background-image: url(img/product/empty.png)"></div>
-                                        </div>
-                                        <div class="product product-b w-full h-full mb-10 hidden">
-                                            <div class="product-floating h-full bg-contain bg-center bg-no-repeat" style="background-image: url(img/product/empty.png)"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="back w-full flex flex-row hidden">
-                                    <div class="w-full flex justify-center items-center">
-                                        <div class="result o w-full h-[75%] flex flex-col m-2 border-solid border-4 border-[#02C3C2] rounded-3xl hiddenn">
-                                            <div class="p-6 !font-extrabold">
-                                                <div class="w-full text-[2rem] md:text-[4rem] text-[#02C3C2]">정 답 !</div>
-                                            </div>
-                                            <div class="mt-auto">
-                                                <button type="button" class="quiz-done text-white bg-[#F68534] hover:bg-[#F68534] focus:outline-none focus:ring-4 focus:ring-[#F68534] font-medium rounded-[2rem] text-[3rem] px-[3rem] py-4 text-center me-2 mb-2 dark:bg-[#F68534] dark:hover:bg-[#F68534] dark:focus:ring-[#F68534]">완 료</button>
-                                            </div>
-                                        </div>
-                                        <div class="result x w-full flex flex-col m-2 border-solid border-4 border-[#F68534] rounded-3xl hidden">
-                                            <div class="p-6 !font-extrabold">
-                                                <div class="wrong w-full text-[2rem] md:text-[4rem] text-[#F68534] cursor-pointer">오 답 !</div>
-                                            </div>
-                                            <div>
-                                                <div>
-                                                    <div class="inline w-full h-full text-xl md:text-4xl flex items-center justify-center rounded-3xl bg-white">
-                                                        <label class="w-[14rem] text-[2rem] md:text-[4rem] text-[#02C3C2] !font-extrabold">정 답</label>
-                                                        <p class="explanation p-12 break-words leading-relaxed text-xl md:text-5xl"></p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="report w-full">
-                                <div class="swiper-pagination-wrap w-full text-center">
-                                    <ol class="swiper-pagination w-full inline-block">
-                                        <li class="swiper-bullet w-[2rem] inline-block m-1"><button class="bg-blue-500" data-page-num="0" title="slide 1"></button></li>
-                                        <li class="swiper-bullet"><button data-page-num="1" title="slide 2"></button></li>
-                                        <li class="swiper-bullet"><button data-page-num="2" title="slide 3"></button></li>
-                                    </ol>
-                                </div>
-                            </div>
+                        <div class="bottom tw-flex tw-justify-center tw-items-center C-O-N-T-R-O-L---------- tw-bg-blue--600">
+                            <figure class="tw-flex tw-justify-center">
+                                <img class="tw-h-3" src="img/logo.png" alt="moroccanoil" />
+                            </figure>
                         </div>
                     </div>
                 </div>
+                <!--
 
-                <!-- If we need pagination -->
-                <div class="swiper-pagination"></div>
+                    :::::::::::::::::::: intro - e n d ::::::::::::::::::::
 
-                <!-- If we need navigation buttons -->
-                <!-- <div class="swiper-button-prev"></div>
-                <div class="swiper-button-next"></div> -->
+                -->
+                <!--
 
-                <!-- <div class="report-wrapper">
-                    <span class="result"></span>
-                    <span class="result"></span>
-                </div> -->
+                    :::::::::::::::::::: 1 - begin ::::::::::::::::::::
+
+                -->
+                <div class="swiper-slide">
+                    <div class="card tw-grid tw-grid-rows-[10%_auto_10%] tw-w-screen tw-h-screen tw-bg-app" data-index="1">
+                        <div class="top tw-flex tw-justify-center tw-items-center C-O-N-T-R-O-L---------- tw-bg-blue--200">
+                            <!-- <div class="testable previous tw-absolute tw-left-0 tw-p-4 tw-cursor-pointer C-O-N-T-R-O-L---------- tw--hidden">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="16" width="14" viewBox="0 0 448 512">
+                                    <path fill="#ffffff" d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z" />
+                                </svg>
+                            </div> -->
+                            <label class="tw-text-2xl">모로칸오일 OX 퀴즈 <span class="testable tw-absolute tw-top-[0.8%] tw-left-[68%] tw-text-red-500 tw-font-poppins blink C-O-N-T-R-O-L---------- tw-hidden">T E S T</span></label>
+                            <div class="testable next tw-absolute tw-right-0 tw-p-4 tw-cursor-pointer C-O-N-T-R-O-L---------- tw--hidden">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="16" width="14" viewBox="0 0 448 512">
+                                    <path fill="#ffffff" d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="middle tw-flex tw-flex-col tw-border-x-[1rem] tw-border-app">
+                            <div class="problem tw-flex-1 tw-flex tw-justify-center tw-items-center tw-rounded-t-2xl tw-p-4 tw-text-app tw-font-bold tw-bg-white C-O-N-T-R-O-L---------- tw-bg-yellow--200">
+                                <p class="question">problem</p>
+                            </div>
+                            <div class="decision tw-flex-auto tw-flex tw-items-center tw-border-x-[1rem] tw-border-white tw-bg-white C-O-N-T-R-O-L---------- tw-bg-yellow--400">
+                                <div class="answer tw-flex-1 tw-flex tw-justify-around C-O-N-T-R-O-L---------- tw--hidden">
+                                    <button type="button" class="yes tw-w-[5.5rem] tw-h-[5.5rem] tw-text-[3.3rem] tw-text-correct tw-border-solid tw-border-4 tw-border-correct tw-rounded-full">O</button>
+                                    <button type="button" class="no tw-w-[5.5rem] tw-h-[5.5rem] tw-text-[3.3rem] tw-text-wrong tw-border-solid tw-border-4 tw-border-wrong tw-rounded-full">X</button>
+                                </div>
+                                <div class="solution tw-flex-1 tw-grid tw-grid-rows-[25%_auto_25%] tw-border-2 tw-border-app tw-rounded-2xl tw-w-full tw-h-full C-O-N-T-R-O-L---------- tw-hidden">
+                                    <div class="state tw-flex tw-justify-center tw-items-center tw-rounded-t-2xl tw-bg-gray--200">
+                                        <label class="wrong reset tw-text-wrong tw-text-2xl">오 답 !</label>
+                                        <label class="correct tw-text-wrong tw-text-2xl C-O-N-T-R-O-L---------- tw-hidden">정 답 !</label>
+                                    </div>
+                                    <div class="explanation tw-flex tw-justify-center tw-items-center C-O-N-T-R-O-L---------- tw-bg-gray--400 tw-hidden">
+                                        <ul class="tw-flex-1 tw-flex tw-justify-between tw-items-center tw-px-1">
+                                            <li class="tw-flex-1 tw-contents tw-text-correct tw-text-2xl tw-font-bold">정답</li>
+                                            <li class="content tw-flex-auto tw-text-correct tw-w-auto tw-mx-1 tw-text-start">explanation</li>
+                                        </ul>
+                                    </div>
+                                    <div class="confirm tw-flex tw-justify-center tw-items-center tw-rounded-b-2xl C-O-N-T-R-O-L---------- tw-bg-gray--600 tw-hidden">
+                                        <button type="button" class="next tw-font-medium tw-rounded-2xl tw-text-xl tw-px-5 tw-py-1 tw-text-center tw-bg-wrong C-O-N-T-R-O-L---------- tw--hidden">다 음</button>
+                                        <button type="button" class="reset tw-font-medium tw-rounded-2xl tw-text-xl tw-px-5 tw-py-1 tw-text-center tw-bg-wrong C-O-N-T-R-O-L---------- tw-hidden">다 시 하 기</button>
+                                    </div>
+                                </div>
+                                <div class="promotion tw-flex tw-basis-1/4 tw-justify-end tw-bottom-[4.6rem] C-O-N-T-R-O-L---------- tw-bg-sky--600 tw--hidden">
+                                    <figure class="product tw-flex tw-justify-end tw-w-[55%]">
+                                        <img class="tw-bg-no-repeat" src="img/product/shower-gel.png" alt="moroccanoil product" />
+                                        <img class="tw-bg-no-repeat tw-ml-1 tw--hidden" src="img/product/intense-curl-cream.png" alt="moroccanoil product" />
+                                    </figure>
+                                </div>
+                            </div>
+                            <div class="condition tw-flex-1 tw-flex tw-justify-center tw-items-end tw-rounded-b-2xl tw-bg-white C-O-N-T-R-O-L---------- tw-bg-yellow--600">
+                                <ul class="tw-flex tw-justify-between tw-items-end tw-pb-1">
+                                    <li class="tw-bg-gray-50 tw-w-[3.3rem] tw-mx-1 tw-py-0.5 tw-rounded-xl tw-border tw-border-solved"></li>
+                                    <li class="tw-bg-gray-50 tw-w-[3.3rem] tw-mx-1 tw-py-0.5 tw-rounded-xl tw-border tw-border-app"></li>
+                                    <li class="tw-bg-gray-50 tw-w-[3.3rem] tw-mx-1 tw-py-0.5 tw-rounded-xl tw-border tw-border-app"></li>
+                                    <li class="tw-bg-gray-50 tw-w-[3.3rem] tw-mx-1 tw-py-0.5 tw-rounded-xl tw-border tw-border-app"></li>
+                                    <li class="tw-bg-gray-50 tw-w-[3.3rem] tw-mx-1 tw-py-0.5 tw-rounded-xl tw-border tw-border-app"></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="bottom tw-flex tw-justify-center tw-items-center C-O-N-T-R-O-L---------- tw-bg-blue--600">
+                            <figure class="tw-flex tw-justify-center">
+                                <img class="tw-h-3" src="img/logo.png" alt="moroccanoil" />
+                            </figure>
+                        </div>
+                        <!--
+                        <div class="promotion tw-absolute tw-flex tw-justify-end tw-bottom-[4.6rem] tw-w-full tw-bg-sky-600 tw--hidden">
+                            <figure class="product tw-flex tw-justify-end tw-w-[13%] tw-px-2">
+                                <img class="tw-bg-no-repeat" src="img/product/shower-gel.png" alt="moroccanoil product" />
+                                <img class="tw-bg-no-repeat tw-ml-1 tw--hidden" src="img/product/intense-curl-cream.png" alt="moroccanoil product" />
+                            </figure>
+                        </div>
+                        -->
+                    </div>
+                </div>
+                <!--
+
+                    :::::::::::::::::::: 1 - e n d ::::::::::::::::::::
+
+                -->
+                <!--
+
+                    :::::::::::::::::::: 2 - begin ::::::::::::::::::::
+
+                -->
+                <div class="swiper-slide">
+                    <div class="card tw-grid tw-grid-rows-[10%_auto_10%] tw-w-screen tw-h-screen tw-bg-app" data-index="2">
+                        <div class="top tw-flex tw-justify-center tw-items-center C-O-N-T-R-O-L---------- tw-bg-blue--200">
+                            <div class="testable previous tw-absolute tw-left-0 tw-p-4 tw-cursor-pointer C-O-N-T-R-O-L---------- tw--hidden">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="16" width="14" viewBox="0 0 448 512">
+                                    <path fill="#ffffff" d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z" />
+                                </svg>
+                            </div>
+                            <label class="tw-text-2xl">모로칸오일 OX 퀴즈 <span class="testable tw-absolute tw-top-[0.8%] tw-left-[68%] tw-text-red-500 tw-font-poppins blink C-O-N-T-R-O-L---------- tw-hidden">T E S T</span></label>
+                            <div class="testable next tw-absolute tw-right-0 tw-p-4 tw-cursor-pointer C-O-N-T-R-O-L---------- tw--hidden">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="16" width="14" viewBox="0 0 448 512">
+                                    <path fill="#ffffff" d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="middle tw-flex tw-flex-col tw-border-x-[1rem] tw-border-app">
+                            <div class="problem tw-flex-1 tw-flex tw-justify-center tw-items-center tw-rounded-t-2xl tw-p-4 tw-text-app tw-font-bold tw-bg-white C-O-N-T-R-O-L---------- tw-bg-yellow--200">
+                                <p class="question">problem</p>
+                            </div>
+                            <div class="decision tw-flex-auto tw-flex tw-items-center tw-border-x-[1rem] tw-border-white tw-bg-white C-O-N-T-R-O-L---------- tw-bg-yellow--400">
+                                <div class="answer tw-flex-1 tw-flex tw-justify-around C-O-N-T-R-O-L---------- tw--hidden">
+                                    <button type="button" class="yes tw-w-[5.5rem] tw-h-[5.5rem] tw-text-[3.3rem] tw-text-correct tw-border-solid tw-border-4 tw-border-correct tw-rounded-full">O</button>
+                                    <button type="button" class="no tw-w-[5.5rem] tw-h-[5.5rem] tw-text-[3.3rem] tw-text-wrong tw-border-solid tw-border-4 tw-border-wrong tw-rounded-full">X</button>
+                                </div>
+                                <div class="solution tw-flex-1 tw-grid tw-grid-rows-[25%_auto_25%] tw-border-2 tw-border-app tw-rounded-2xl tw-w-full tw-h-full C-O-N-T-R-O-L---------- tw-hidden">
+                                    <div class="state tw-flex tw-justify-center tw-items-center tw-rounded-t-2xl tw-bg-gray--200">
+                                        <label class="wrong reset tw-text-wrong tw-text-2xl">오 답 !</label>
+                                        <label class="correct tw-text-wrong tw-text-2xl C-O-N-T-R-O-L---------- tw-hidden">정 답 !</label>
+                                    </div>
+                                    <div class="explanation tw-flex tw-justify-center tw-items-center C-O-N-T-R-O-L---------- tw-bg-gray--400 tw-hidden">
+                                        <ul class="tw-flex-1 tw-flex tw-justify-between tw-items-center tw-px-1">
+                                            <li class="tw-flex-1 tw-contents tw-text-correct tw-text-2xl tw-font-bold">정답</li>
+                                            <li class="content tw-flex-auto tw-text-correct tw-w-auto tw-mx-1 tw-text-start">explanation</li>
+                                        </ul>
+                                    </div>
+                                    <div class="confirm tw-flex tw-justify-center tw-items-center tw-rounded-b-2xl C-O-N-T-R-O-L---------- tw-bg-gray--600 tw-hidden">
+                                        <button type="button" class="next tw-font-medium tw-rounded-2xl tw-text-xl tw-px-5 tw-py-1 tw-text-center tw-bg-wrong C-O-N-T-R-O-L---------- tw--hidden">다 음</button>
+                                        <button type="button" class="reset tw-font-medium tw-rounded-2xl tw-text-xl tw-px-5 tw-py-1 tw-text-center tw-bg-wrong C-O-N-T-R-O-L---------- tw-hidden">다 시 하 기</button>
+                                    </div>
+                                </div>
+                                <div class="promotion tw-flex tw-basis-1/4 tw-justify-end tw-bottom-[4.6rem] C-O-N-T-R-O-L---------- tw-bg-sky--600 tw--hidden">
+                                    <figure class="product tw-flex tw-justify-end tw-w-[55%]">
+                                        <img class="tw-bg-no-repeat" src="img/product/shower-gel.png" alt="moroccanoil product" />
+                                        <img class="tw-bg-no-repeat tw-ml-1 tw--hidden" src="img/product/intense-curl-cream.png" alt="moroccanoil product" />
+                                    </figure>
+                                </div>
+                            </div>
+                            <div class="condition tw-flex-1 tw-flex tw-justify-center tw-items-end tw-rounded-b-2xl tw-bg-white C-O-N-T-R-O-L---------- tw-bg-yellow--600">
+                                <ul class="tw-flex tw-justify-between tw-items-end tw-pb-1">
+                                    <li class="tw-bg-solved tw-w-[3.3rem] tw-mx-1 tw-py-0.5 tw-rounded-xl tw-border tw-border-solved"></li>
+                                    <li class="tw-bg-gray-50 tw-w-[3.3rem] tw-mx-1 tw-py-0.5 tw-rounded-xl tw-border tw-border-solved"></li>
+                                    <li class="tw-bg-gray-50 tw-w-[3.3rem] tw-mx-1 tw-py-0.5 tw-rounded-xl tw-border tw-border-app"></li>
+                                    <li class="tw-bg-gray-50 tw-w-[3.3rem] tw-mx-1 tw-py-0.5 tw-rounded-xl tw-border tw-border-app"></li>
+                                    <li class="tw-bg-gray-50 tw-w-[3.3rem] tw-mx-1 tw-py-0.5 tw-rounded-xl tw-border tw-border-app"></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="bottom tw-flex tw-justify-center tw-items-center C-O-N-T-R-O-L---------- tw-bg-blue--600">
+                            <figure class="tw-flex tw-justify-center">
+                                <img class="tw-h-3" src="img/logo.png" alt="moroccanoil" />
+                            </figure>
+                        </div>
+                        <!--
+                        <div class="promotion tw-absolute tw-flex tw-justify-end tw-bottom-[4.6rem] tw-w-full tw-bg-sky-600 tw--hidden">
+                            <figure class="product tw-flex tw-justify-end tw-w-[13%] tw-px-2">
+                                <img class="tw-bg-no-repeat" src="img/product/shower-gel.png" alt="moroccanoil product" />
+                                <img class="tw-bg-no-repeat tw-ml-1 tw--hidden" src="img/product/intense-curl-cream.png" alt="moroccanoil product" />
+                            </figure>
+                        </div>
+                        -->
+                    </div>
+                </div>
+                <!--
+
+                    :::::::::::::::::::: 2 - e n d ::::::::::::::::::::
+
+                -->
+                <!--
+
+                    :::::::::::::::::::: 3 - begin ::::::::::::::::::::
+
+                -->
+                <div class="swiper-slide">
+                    <div class="card tw-grid tw-grid-rows-[10%_auto_10%] tw-w-screen tw-h-screen tw-bg-app" data-index="3">
+                        <div class="top tw-flex tw-justify-center tw-items-center C-O-N-T-R-O-L---------- tw-bg-blue--200">
+                            <div class="testable previous tw-absolute tw-left-0 tw-p-4 tw-cursor-pointer C-O-N-T-R-O-L---------- tw--hidden">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="16" width="14" viewBox="0 0 448 512">
+                                    <path fill="#ffffff" d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z" />
+                                </svg>
+                            </div>
+                            <label class="tw-text-2xl">모로칸오일 OX 퀴즈 <span class="testable tw-absolute tw-top-[0.8%] tw-left-[68%] tw-text-red-500 tw-font-poppins blink C-O-N-T-R-O-L---------- tw-hidden">T E S T</span></label>
+                            <div class="testable next tw-absolute tw-right-0 tw-p-4 tw-cursor-pointer C-O-N-T-R-O-L---------- tw--hidden">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="16" width="14" viewBox="0 0 448 512">
+                                    <path fill="#ffffff" d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="middle tw-flex tw-flex-col tw-border-x-[1rem] tw-border-app">
+                            <div class="problem tw-flex-1 tw-flex tw-justify-center tw-items-center tw-rounded-t-2xl tw-p-4 tw-text-app tw-font-bold tw-bg-white C-O-N-T-R-O-L---------- tw-bg-yellow--200">
+                                <p class="question">problem</p>
+                            </div>
+                            <div class="decision tw-flex-auto tw-flex tw-items-center tw-border-x-[1rem] tw-border-white tw-bg-white C-O-N-T-R-O-L---------- tw-bg-yellow--400">
+                                <div class="answer tw-flex-1 tw-flex tw-justify-around C-O-N-T-R-O-L---------- tw--hidden">
+                                    <button type="button" class="yes tw-w-[5.5rem] tw-h-[5.5rem] tw-text-[3.3rem] tw-text-correct tw-border-solid tw-border-4 tw-border-correct tw-rounded-full">O</button>
+                                    <button type="button" class="no tw-w-[5.5rem] tw-h-[5.5rem] tw-text-[3.3rem] tw-text-wrong tw-border-solid tw-border-4 tw-border-wrong tw-rounded-full">X</button>
+                                </div>
+                                <div class="solution tw-flex-1 tw-grid tw-grid-rows-[25%_auto_25%] tw-border-2 tw-border-app tw-rounded-2xl tw-w-full tw-h-full C-O-N-T-R-O-L---------- tw-hidden">
+                                    <div class="state tw-flex tw-justify-center tw-items-center tw-rounded-t-2xl tw-bg-gray--200">
+                                        <label class="wrong reset tw-text-wrong tw-text-2xl">오 답 !</label>
+                                        <label class="correct tw-text-wrong tw-text-2xl C-O-N-T-R-O-L---------- tw-hidden">정 답 !</label>
+                                    </div>
+                                    <div class="explanation tw-flex tw-justify-center tw-items-center C-O-N-T-R-O-L---------- tw-bg-gray--400 tw-hidden">
+                                        <ul class="tw-flex-1 tw-flex tw-justify-between tw-items-center tw-px-1">
+                                            <li class="tw-flex-1 tw-contents tw-text-correct tw-text-2xl tw-font-bold">정답</li>
+                                            <li class="content tw-flex-auto tw-text-correct tw-w-auto tw-mx-1 tw-text-start">explanation</li>
+                                        </ul>
+                                    </div>
+                                    <div class="confirm tw-flex tw-justify-center tw-items-center tw-rounded-b-2xl C-O-N-T-R-O-L---------- tw-bg-gray--600 tw-hidden">
+                                        <button type="button" class="next tw-font-medium tw-rounded-2xl tw-text-xl tw-px-5 tw-py-1 tw-text-center tw-bg-wrong C-O-N-T-R-O-L---------- tw--hidden">다 음</button>
+                                        <button type="button" class="reset tw-font-medium tw-rounded-2xl tw-text-xl tw-px-5 tw-py-1 tw-text-center tw-bg-wrong C-O-N-T-R-O-L---------- tw-hidden">다 시 하 기</button>
+                                    </div>
+                                </div>
+                                <div class="promotion tw-flex tw-basis-1/4 tw-justify-end tw-bottom-[4.6rem] C-O-N-T-R-O-L---------- tw-bg-sky--600 tw--hidden">
+                                    <figure class="product tw-flex tw-justify-end tw-w-[55%]">
+                                        <img class="tw-bg-no-repeat" src="img/product/shower-gel.png" alt="moroccanoil product" />
+                                        <img class="tw-bg-no-repeat tw-ml-1 tw--hidden" src="img/product/intense-curl-cream.png" alt="moroccanoil product" />
+                                    </figure>
+                                </div>
+                            </div>
+                            <div class="condition tw-flex-1 tw-flex tw-justify-center tw-items-end tw-rounded-b-2xl tw-bg-white C-O-N-T-R-O-L---------- tw-bg-yellow--600">
+                                <ul class="tw-flex tw-justify-between tw-items-end tw-pb-1">
+                                    <li class="tw-bg-solved tw-w-[3.3rem] tw-mx-1 tw-py-0.5 tw-rounded-xl tw-border tw-border-solved"></li>
+                                    <li class="tw-bg-solved tw-w-[3.3rem] tw-mx-1 tw-py-0.5 tw-rounded-xl tw-border tw-border-solved"></li>
+                                    <li class="tw-bg-gray-50 tw-w-[3.3rem] tw-mx-1 tw-py-0.5 tw-rounded-xl tw-border tw-border-solved"></li>
+                                    <li class="tw-bg-gray-50 tw-w-[3.3rem] tw-mx-1 tw-py-0.5 tw-rounded-xl tw-border tw-border-app"></li>
+                                    <li class="tw-bg-gray-50 tw-w-[3.3rem] tw-mx-1 tw-py-0.5 tw-rounded-xl tw-border tw-border-app"></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="bottom tw-flex tw-justify-center tw-items-center C-O-N-T-R-O-L---------- tw-bg-blue--600">
+                            <figure class="tw-flex tw-justify-center">
+                                <img class="tw-h-3" src="img/logo.png" alt="moroccanoil" />
+                            </figure>
+                        </div>
+                        <!--
+                        <div class="promotion tw-absolute tw-flex tw-justify-end tw-bottom-[4.6rem] tw-w-full tw-bg-sky-600 tw--hidden">
+                            <figure class="product tw-flex tw-justify-end tw-w-[13%] tw-px-2">
+                                <img class="tw-bg-no-repeat" src="img/product/shower-gel.png" alt="moroccanoil product" />
+                                <img class="tw-bg-no-repeat tw-ml-1 tw--hidden" src="img/product/intense-curl-cream.png" alt="moroccanoil product" />
+                            </figure>
+                        </div>
+                        -->
+                    </div>
+                </div>
+                <!--
+
+                    :::::::::::::::::::: 3 - e n d ::::::::::::::::::::
+
+                -->
+                <!--
+
+                    :::::::::::::::::::: 4 - begin ::::::::::::::::::::
+
+                -->
+                <div class="swiper-slide">
+                    <div class="card tw-grid tw-grid-rows-[10%_auto_10%] tw-w-screen tw-h-screen tw-bg-app" data-index="4">
+                        <div class="top tw-flex tw-justify-center tw-items-center C-O-N-T-R-O-L---------- tw-bg-blue--200">
+                            <div class="testable previous tw-absolute tw-left-0 tw-p-4 tw-cursor-pointer C-O-N-T-R-O-L---------- tw--hidden">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="16" width="14" viewBox="0 0 448 512">
+                                    <path fill="#ffffff" d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z" />
+                                </svg>
+                            </div>
+                            <label class="tw-text-2xl">모로칸오일 OX 퀴즈 <span class="testable tw-absolute tw-top-[0.8%] tw-left-[68%] tw-text-red-500 tw-font-poppins blink C-O-N-T-R-O-L---------- tw-hidden">T E S T</span></label>
+                            <div class="testable next tw-absolute tw-right-0 tw-p-4 tw-cursor-pointer C-O-N-T-R-O-L---------- tw--hidden">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="16" width="14" viewBox="0 0 448 512">
+                                    <path fill="#ffffff" d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="middle tw-flex tw-flex-col tw-border-x-[1rem] tw-border-app">
+                            <div class="problem tw-flex-1 tw-flex tw-justify-center tw-items-center tw-rounded-t-2xl tw-p-4 tw-text-app tw-font-bold tw-bg-white C-O-N-T-R-O-L---------- tw-bg-yellow--200">
+                                <p class="question">problem</p>
+                            </div>
+                            <div class="decision tw-flex-auto tw-flex tw-items-center tw-border-x-[1rem] tw-border-white tw-bg-white C-O-N-T-R-O-L---------- tw-bg-yellow--400">
+                                <div class="answer tw-flex-1 tw-flex tw-justify-around C-O-N-T-R-O-L---------- tw--hidden">
+                                    <button type="button" class="yes tw-w-[5.5rem] tw-h-[5.5rem] tw-text-[3.3rem] tw-text-correct tw-border-solid tw-border-4 tw-border-correct tw-rounded-full">O</button>
+                                    <button type="button" class="no tw-w-[5.5rem] tw-h-[5.5rem] tw-text-[3.3rem] tw-text-wrong tw-border-solid tw-border-4 tw-border-wrong tw-rounded-full">X</button>
+                                </div>
+                                <div class="solution tw-flex-1 tw-grid tw-grid-rows-[25%_auto_25%] tw-border-2 tw-border-app tw-rounded-2xl tw-w-full tw-h-full C-O-N-T-R-O-L---------- tw-hidden">
+                                    <div class="state tw-flex tw-justify-center tw-items-center tw-rounded-t-2xl tw-bg-gray--200">
+                                        <label class="wrong reset tw-text-wrong tw-text-2xl">오 답 !</label>
+                                        <label class="correct tw-text-wrong tw-text-2xl C-O-N-T-R-O-L---------- tw-hidden">정 답 !</label>
+                                    </div>
+                                    <div class="explanation tw-flex tw-justify-center tw-items-center C-O-N-T-R-O-L---------- tw-bg-gray--400 tw-hidden">
+                                        <ul class="tw-flex-1 tw-flex tw-justify-between tw-items-center tw-px-1">
+                                            <li class="tw-flex-1 tw-contents tw-text-correct tw-text-2xl tw-font-bold">정답</li>
+                                            <li class="content tw-flex-auto tw-text-correct tw-w-auto tw-mx-1 tw-text-start">explanation</li>
+                                        </ul>
+                                    </div>
+                                    <div class="confirm tw-flex tw-justify-center tw-items-center tw-rounded-b-2xl C-O-N-T-R-O-L---------- tw-bg-gray--600 tw-hidden">
+                                        <button type="button" class="next tw-font-medium tw-rounded-2xl tw-text-xl tw-px-5 tw-py-1 tw-text-center tw-bg-wrong C-O-N-T-R-O-L---------- tw--hidden">다 음</button>
+                                        <button type="button" class="reset tw-font-medium tw-rounded-2xl tw-text-xl tw-px-5 tw-py-1 tw-text-center tw-bg-wrong C-O-N-T-R-O-L---------- tw-hidden">다 시 하 기</button>
+                                    </div>
+                                </div>
+                                <div class="promotion tw-flex tw-basis-1/4 tw-justify-end tw-bottom-[4.6rem] C-O-N-T-R-O-L---------- tw-bg-sky--600 tw--hidden">
+                                    <figure class="product tw-flex tw-justify-end tw-w-[55%]">
+                                        <img class="tw-bg-no-repeat" src="img/product/shower-gel.png" alt="moroccanoil product" />
+                                        <img class="tw-bg-no-repeat tw-ml-1 tw--hidden" src="img/product/intense-curl-cream.png" alt="moroccanoil product" />
+                                    </figure>
+                                </div>
+                            </div>
+                            <div class="condition tw-flex-1 tw-flex tw-justify-center tw-items-end tw-rounded-b-2xl tw-bg-white C-O-N-T-R-O-L---------- tw-bg-yellow--600">
+                                <ul class="tw-flex tw-justify-between tw-items-end tw-pb-1">
+                                    <li class="tw-bg-solved tw-w-[3.3rem] tw-mx-1 tw-py-0.5 tw-rounded-xl tw-border tw-border-solved"></li>
+                                    <li class="tw-bg-solved tw-w-[3.3rem] tw-mx-1 tw-py-0.5 tw-rounded-xl tw-border tw-border-solved"></li>
+                                    <li class="tw-bg-solved tw-w-[3.3rem] tw-mx-1 tw-py-0.5 tw-rounded-xl tw-border tw-border-solved"></li>
+                                    <li class="tw-bg-gray-50 tw-w-[3.3rem] tw-mx-1 tw-py-0.5 tw-rounded-xl tw-border tw-border-solved"></li>
+                                    <li class="tw-bg-gray-50 tw-w-[3.3rem] tw-mx-1 tw-py-0.5 tw-rounded-xl tw-border tw-border-app"></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="bottom tw-flex tw-justify-center tw-items-center C-O-N-T-R-O-L---------- tw-bg-blue--600">
+                            <figure class="tw-flex tw-justify-center">
+                                <img class="tw-h-3" src="img/logo.png" alt="moroccanoil" />
+                            </figure>
+                        </div>
+                        <!--
+                        <div class="promotion tw-absolute tw-flex tw-justify-end tw-bottom-[4.6rem] tw-w-full tw-bg-sky-600 tw--hidden">
+                            <figure class="product tw-flex tw-justify-end tw-w-[13%] tw-px-2">
+                                <img class="tw-bg-no-repeat" src="img/product/shower-gel.png" alt="moroccanoil product" />
+                                <img class="tw-bg-no-repeat tw-ml-1 tw--hidden" src="img/product/intense-curl-cream.png" alt="moroccanoil product" />
+                            </figure>
+                        </div>
+                        -->
+                    </div>
+                </div>
+                <!--
+
+                    :::::::::::::::::::: 4 - e n d ::::::::::::::::::::
+
+                -->
+                <!--
+
+                    :::::::::::::::::::: 5 - begin ::::::::::::::::::::
+
+                -->
+                <div class="swiper-slide">
+                    <div class="card tw-grid tw-grid-rows-[10%_auto_10%] tw-w-screen tw-h-screen tw-bg-app" data-index="5">
+                        <div class="top tw-flex tw-justify-center tw-items-center C-O-N-T-R-O-L---------- tw-bg-blue--200">
+                            <div class="testable previous tw-absolute tw-left-0 tw-p-4 tw-cursor-pointer C-O-N-T-R-O-L---------- tw--hidden">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="16" width="14" viewBox="0 0 448 512">
+                                    <path fill="#ffffff" d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z" />
+                                </svg>
+                            </div>
+                            <label class="tw-text-2xl">모로칸오일 OX 퀴즈 <span class="testable tw-absolute tw-top-[0.8%] tw-left-[68%] tw-text-red-500 tw-font-poppins blink C-O-N-T-R-O-L---------- tw-hidden">T E S T</span></label>
+                            <!-- <div class="testable next tw-absolute tw-right-0 tw-p-4 tw-cursor-pointer C-O-N-T-R-O-L---------- tw--hidden">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="16" width="14" viewBox="0 0 448 512">
+                                    <path fill="#ffffff" d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z" />
+                                </svg>
+                            </div> -->
+                        </div>
+                        <div class="middle tw-flex tw-flex-col tw-border-x-[1rem] tw-border-app">
+                            <div class="problem tw-flex-1 tw-flex tw-justify-center tw-items-center tw-rounded-t-2xl tw-p-4 tw-text-app tw-font-bold tw-bg-white C-O-N-T-R-O-L---------- tw-bg-yellow--200">
+                                <p class="question">problem</p>
+                            </div>
+                            <div class="decision tw-flex-auto tw-flex tw-items-center tw-border-x-[1rem] tw-border-white tw-bg-white C-O-N-T-R-O-L---------- tw-bg-yellow--400">
+                                <div class="answer tw-flex-1 tw-flex tw-justify-around C-O-N-T-R-O-L---------- tw--hidden">
+                                    <button type="button" class="yes tw-w-[5.5rem] tw-h-[5.5rem] tw-text-[3.3rem] tw-text-correct tw-border-solid tw-border-4 tw-border-correct tw-rounded-full">O</button>
+                                    <button type="button" class="no tw-w-[5.5rem] tw-h-[5.5rem] tw-text-[3.3rem] tw-text-wrong tw-border-solid tw-border-4 tw-border-wrong tw-rounded-full">X</button>
+                                </div>
+                                <div class="solution tw-flex-1 tw-grid tw-grid-rows-[25%_auto_25%] tw-border-2 tw-border-app tw-rounded-2xl tw-w-full tw-h-full C-O-N-T-R-O-L---------- tw-hidden">
+                                    <div class="state tw-flex tw-justify-center tw-items-center tw-rounded-t-2xl tw-bg-gray--200">
+                                        <label class="wrong reset tw-text-wrong tw-text-2xl">오 답 !</label>
+                                        <label class="correct tw-text-wrong tw-text-2xl C-O-N-T-R-O-L---------- tw-hidden">정 답 !</label>
+                                    </div>
+                                    <div class="explanation tw-flex tw-justify-center tw-items-center C-O-N-T-R-O-L---------- tw-bg-gray--400 tw-hidden">
+                                        <ul class="tw-flex-1 tw-flex tw-justify-between tw-items-center tw-px-1">
+                                            <li class="tw-flex-1 tw-contents tw-text-correct tw-text-2xl tw-font-bold">정답</li>
+                                            <li class="content tw-flex-auto tw-text-correct tw-w-auto tw-mx-1 tw-text-start">explanation</li>
+                                        </ul>
+                                    </div>
+                                    <div class="confirm tw-flex tw-justify-center tw-items-center tw-rounded-b-2xl C-O-N-T-R-O-L---------- tw-bg-gray--600 tw-hidden">
+                                        <button type="button" class="next tw-font-medium tw-rounded-2xl tw-text-xl tw-px-5 tw-py-1 tw-text-center tw-bg-wrong C-O-N-T-R-O-L---------- tw-hidden">다 음</button>
+                                        <button type="button" class="reset tw-font-medium tw-rounded-2xl tw-text-xl tw-px-5 tw-py-1 tw-text-center tw-bg-wrong C-O-N-T-R-O-L---------- tw--hidden">다 시 하 기</button>
+                                    </div>
+                                </div>
+                                <div class="promotion tw-flex tw-basis-1/4 tw-justify-end tw-bottom-[4.6rem] C-O-N-T-R-O-L---------- tw-bg-sky--600 tw--hidden">
+                                    <figure class="product tw-flex tw-justify-end tw-w-[55%]">
+                                        <img class="tw-bg-no-repeat" src="img/product/shower-gel.png" alt="moroccanoil product" />
+                                        <img class="tw-bg-no-repeat tw-ml-1 tw--hidden" src="img/product/intense-curl-cream.png" alt="moroccanoil product" />
+                                    </figure>
+                                </div>
+                            </div>
+                            <div class="condition tw-flex-1 tw-flex tw-justify-center tw-items-end tw-rounded-b-2xl tw-bg-white C-O-N-T-R-O-L---------- tw-bg-yellow--600">
+                                <ul class="tw-flex tw-justify-between tw-items-end tw-pb-1">
+                                    <li class="tw-bg-solved tw-w-[3.3rem] tw-mx-1 tw-py-0.5 tw-rounded-xl tw-border tw-border-solved"></li>
+                                    <li class="tw-bg-solved tw-w-[3.3rem] tw-mx-1 tw-py-0.5 tw-rounded-xl tw-border tw-border-solved"></li>
+                                    <li class="tw-bg-solved tw-w-[3.3rem] tw-mx-1 tw-py-0.5 tw-rounded-xl tw-border tw-border-solved"></li>
+                                    <li class="tw-bg-solved tw-w-[3.3rem] tw-mx-1 tw-py-0.5 tw-rounded-xl tw-border tw-border-solved"></li>
+                                    <li class="tw-bg-gray-50 tw-w-[3.3rem] tw-mx-1 tw-py-0.5 tw-rounded-xl tw-border tw-border-solved"></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="bottom tw-flex tw-justify-center tw-items-center C-O-N-T-R-O-L---------- tw-bg-blue--600">
+                            <figure class="tw-flex tw-justify-center">
+                                <img class="tw-h-3" src="img/logo.png" alt="moroccanoil" />
+                            </figure>
+                        </div>
+                        <!--
+                        <div class="promotion tw-absolute tw-flex tw-justify-end tw-bottom-[4.6rem] tw-w-full tw-bg-sky-600 tw--hidden">
+                            <figure class="product tw-flex tw-justify-end tw-w-[13%] tw-px-2">
+                                <img class="tw-bg-no-repeat" src="img/product/shower-gel.png" alt="moroccanoil product" />
+                                <img class="tw-bg-no-repeat tw-ml-1 tw--hidden" src="img/product/intense-curl-cream.png" alt="moroccanoil product" />
+                            </figure>
+                        </div>
+                        -->
+                    </div>
+                </div>
+                <!--
+
+                    :::::::::::::::::::: 5 - e n d ::::::::::::::::::::
+
+                -->
+
+                <!--
+
+                    ::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+                    ::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+                    ::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+                    :::::::::::::::::::: backup - begin ::::::::::::::::::::
+                    ::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+                    ::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+                    ::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+                    
+                -->
+                <!--
+                backup-0.0.1
+                <div class="swiper-slide">
+                    <div class="card tw-grid tw-grid-rows-[10%_auto_10%] tw-w-screen tw-h-screen tw-bg-app" data-index="5">
+                        <div class="top tw-flex tw-justify-center tw-items-center tw-bg-blue--200">
+                            <div class="lock previous tw-absolute tw-left-0 tw-p-4 tw-cursor-pointer">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="16" width="14" viewBox="0 0 448 512">
+                                    <path fill="#ffffff" d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z" />
+                                </svg>
+                            </div>
+                            <label class="tw-text-2xl">모로칸오일 OX 퀴즈</label>
+                            <div class="lock next tw-absolute tw-right-0 tw-p-4 tw-cursor-pointer">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="16" width="14" viewBox="0 0 448 512">
+                                    <path fill="#ffffff" d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="middle tw-flex tw-flex-col tw-border-x-[1rem] tw-border-app">
+                            <div class="question tw-flex-1 tw-flex tw-justify-center tw-items-center tw-rounded-t-2xl tw-p-4 tw-text-app tw-font-bold tw-bg-white tw-bg-yellow--200">question</div>
+                            <div class="decision tw-flex-auto tw-flex tw-items-center tw-border-x-[1rem] tw-border-white tw-bg-white tw-bg-yellow--400">
+                                <div class="answer tw-flex-1 tw-flex tw-justify-around tw-px-[8rem] tw--hidden">
+                                    <button type="button" class="yes tw-w-[5.5rem] tw-h-[5.5rem] tw-text-[3.3rem] tw-text-correct tw-border-solid tw-border-4 tw-border-correct tw-rounded-full">O</button>
+                                    <button type="button" class="no tw-w-[5.5rem] tw-h-[5.5rem] tw-text-[3.3rem] tw-text-wrong tw-border-solid tw-border-4 tw-border-wrong tw-rounded-full">X</button>
+                                </div>
+                                <div class="solution tw-flex-1 tw-grid tw-grid-rows-[25%_auto_20%] tw-border-2 tw-border-app tw-rounded-2xl tw-w-full tw-h-full tw-hidden">
+                                    <div class="state tw-flex tw-justify-center tw-items-center tw-rounded-t-2xl tw-bg-gray--200">
+                                        <label class="reset tw-text-wrong tw-text-2xl">오 답 !</label>
+                                    </div>
+                                    <div class="explanation tw-flex tw-justify-center tw-items-center tw-bg-gray--400 tw-hidden">
+                                        <ul class="tw-flex-1 tw-flex tw-justify-between tw-items-center">
+                                            <li class="tw-flex-1 tw-text-correct tw-mx-2 tw-text-2xl tw-font-bold">정답</li>
+                                            <li class="content tw-flex-auto tw-text-correct tw-w-auto tw-mx-1 tw-text-start">explanation</li>
+                                        </ul>
+                                    </div>
+                                    <div class="confirm tw-flex tw-justify-center tw-items-center tw-rounded-b-2xl tw-bg-gray--600">
+                                        <button type="button" class="next tw-font-medium tw-rounded-2xl tw-text-xl tw-px-5 tw-py-1 tw-text-center tw-bg-wrong">다 음</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="condition tw-flex-1 tw-flex tw-justify-center tw-items-center tw-rounded-b-2xl tw-bg-white tw-bg-yellow--600">
+                                <ul class="tw-flex tw-justify-between tw-items-end">
+                                    <li class="tw-bg-gray-100 tw-w-[3rem] tw-mx-1 tw-py-0.5 tw-rounded-xl tw-border tw-border-app"></li>
+                                    <li class="tw-bg-gray-100 tw-w-[3rem] tw-mx-1 tw-py-0.5 tw-rounded-xl tw-border tw-border-app"></li>
+                                    <li class="tw-bg-gray-100 tw-w-[3rem] tw-mx-1 tw-py-0.5 tw-rounded-xl tw-border tw-border-app"></li>
+                                    <li class="tw-bg-gray-200 tw-w-[3rem] tw-mx-1 tw-py-0.5 tw-rounded-xl tw-border tw-border-app"></li>
+                                    <li class="tw-bg-gray-200 tw-w-[3rem] tw-mx-1 tw-py-0.5 tw-rounded-xl tw-border tw-border-app"></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="bottom tw-flex tw-justify-center tw-items-center tw-bg-blue--600">
+                            <figure class="tw-flex tw-justify-center">
+                                <img class="tw-h-3" src="img/logo.png" alt="moroccanoil" />
+                            </figure>
+                        </div>
+                        <div class="promotion tw-absolute tw-flex tw-justify-end tw-bottom-[4.6rem] tw-w-full tw--hidden">
+                            <figure class="product tw-flex tw-justify-end tw-w-[13%] tw-px-2">
+                                <img class="tw-bg-no-repeat" src="img/product/shower-gel.png" alt="moroccanoil product" />
+                                <img class="tw-bg-no-repeat tw-ml-1 tw--hidden" src="img/product/intense-curl-cream.png" alt="moroccanoil product" />
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+                -->
+                <!--
+                    
+                    ::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+                    ::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+                    ::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+                    :::::::::::::::::::: backup - e n d ::::::::::::::::::::
+                    ::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+                    ::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+                    ::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+                -->
             </div>
-            <!-- </div>
-            </div>
-            <div class="back">
-                <h2>Angular</h2>
-                <p>Good tools make application development quicker and easier to maintain than if you did everything by hand..</p>
-            </div> -->
-        </main>
-
-        <footer class="fixed w-full bottom-0 p-4 z-999 bg-[#02C3C2]">
-            <div class="content-wrapper py-4 md:py-2 w-full flex justify-center">
-                <img class="h-auto md:h-8" src="img/logo.png" alt="moroccanoil" />
-            </div>
-        </footer>
+        </div>
 
         <script src="https://code.jquery.com/jquery-latest.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <script src="https://cdn.tailwindcss.com"></script>
         <script src="js/data.js"></script>
         <script src="js/script.js"></script>
         <script>
             $(function () {
-                console.info('i`m ready!');
+                const ascii = `
+                                                                 _ _
+                                                                (_) |
+             _ __ ___   ___  _ __ ___   ___ ___ __ _ _ __   ___  _| |
+            | '_ \` _ \\ / _ \\| '__/ _ \\ / __/ __/ _\` | '_ \\ / _ \\| | |
+            | | | | | | (_) | | | (_) | (_| (_| (_| | | | | (_) | | |
+            |_| |_| |_|\\___/|_|  \\___/ \\___\\___\\__,_|_| |_|\\___/|_|_|
+                           `;
 
-                let questions = [];
+                console.info(ascii);
 
                 /* swiper - begin */
                 let swiperRealIndex = 0;
 
                 const swiper = new Swiper('.swiper-container', {
+                    //*
                     allowTouchMove: false,
+                    /*/
+                               //// do no use !!!
+                               //*/
                     slidesPerView: 1,
                     paginationClickable: true,
                     parallax: false,
@@ -406,115 +586,284 @@
                     on: {
                         activeIndexChange: function () {
                             swiperRealIndex = this.realIndex;
-                            console.log(swiperRealIndex + '번째 slide입니다.');
                         },
                     },
                 });
                 /* swiper - e n d */
 
+                const TESTABLE = false;
+                const SPECIFIC = 0; //// if TESTABLE is true then selectable 0 ~ 7
+                const JSONABLE = false; //// if TESTABLE is true then print json object
+
                 const QUIZ_COUNT = 5;
-                const $quizzes = $('.quiz');
 
+                /* generate questions - begin */
+                let questions = [];
+
+                //// specific - for test : 0 ~ 7
                 const generate = () => {
-                    questions = generateQuestions(QUIZ_COUNT);
-                };
+                    return new Promise((resolve, reject) => {
+                        let specifics = [];
 
-                const render = () => {
-                    $.each($quizzes, (index, elem) => {
-                        // console.info(index, elem);
-                        // console.info(questions[index].question);
-                        const question = questions[index];
+                        if (TESTABLE && _.inRange(SPECIFIC, -1, 8)) {
+                            const quizzes = [
+                                [1, 2, 3, 4, 5],
+                                [6, 7, 8, 9, 10],
+                                [11, 12, 13, 14, 15],
+                                [16, 17, 18, 19, 20],
+                                [21, 22, 23, 24, 25],
+                                [26, 27, 28, 29, 30],
+                                [31, 32, 33, 34, 35],
+                                [36, 1, 2, 3, 4],
+                            ];
 
-                        $(elem)
-                            .find('.question p')
-                            .text(question.question + `[${question.answer}][${_.size(question.image)}]`);
-                        // $(elem).find('.question. p').text(questions[index].question);
-
-                        if (!!!_.isEmpty(question.explanation)) {
-                            $(elem).find('.result p.explanation').text(question.explanation);
+                            specifics = quizzes[SPECIFIC];
                         }
 
-                        const $products = $(elem).find('.products');
+                        resolve(_.union([{ identifier: 0, product: 'intro', question: 'intro', answer: false, explanation: undefined, image: [] }], generateQuzzes(QUIZ_COUNT, specifics)));
+                    });
+                };
+                /* generate quizzes - e n d */
 
-                        if (!!!_.isEmpty(question.image)) {
-                            const targetClasses = ['.product-a', '.product-b'];
+                const $wrapper = $('.swiper-wrapper');
+                const $cards = $wrapper.find('.card');
 
-                            if (2 === _.size(question.image)) {
-                                $(elem).find('.product').removeClass('hidden');
-                                $products.removeClass('w-[20%]');
-                                $products.addClass('w-[40%]');
+                /* rendering questions - begin */
+                const render = () => {
+                    $.each($cards, (index, card) => {
+                        const q = questions[index];
+
+                        if (index > 0 && q.identifier > 0) {
+                            const $question = $(card).find('.middle .problem .question');
+
+                            if (TESTABLE) {
+                                $(card)
+                                    .find('.middle .problem .question')
+                                    .text(q.question + '' + '' + '' + '' + '' + '' + '' + '' + ` [i:${q.identifier}][a:${q.answer}][e:${!_.isEmpty(q.explanation)}][${_.size(q.image)}]`);
+                            } else {
+                                $(card).find('.middle .problem .question').text(q.question);
                             }
 
-                            _.forEach(question.image, (val, key) => {
-                                $(elem)
-                                    .find(`${targetClasses[key]} .product-floating`)
-                                    .css('background-image', (i, old) => {
-                                        return old.replace('img/product/empty.png', `img/product/${val}`);
-                                    });
-                            });
-                        } else {
-                            const $buttons = $(elem).find('.buttons');
+                            if (TESTABLE && JSONABLE) {
+                                $(card).find('.middle .problem .question').text(JSON.stringify(q, null, 2));
+                                $(card).find('.middle .problem .question').addClass('tw-text-xs tw-text-blue-500');
+                            }
 
-                            $buttons.removeClass('w-[80%]');
-                            $buttons.addClass('w-full');
-                            $products.addClass('hidden');
+                            $(card).find('.middle .decision .solution .explanation ul li.content').text(q.explanation);
+
+                            if (_.isEmpty(q.image)) {
+                                $(card).find('.promotion').addClass('tw-hidden');
+                            } else {
+                                $($(card).find('.promotion .product img')).addClass('tw-hidden');
+
+                                const images = [$(card).find('.promotion .product img:first-child'), $(card).find('.promotion .product img:last-child')];
+
+                                _.forEach(q.image, (src, jndex) => {
+                                    $(images[jndex]).removeClass('tw-hidden');
+                                    $(images[jndex]).prop('src', `img/product/${src}`);
+                                });
+                            }
                         }
                     });
                 };
+                /* rendering questions - e n d */
 
-                /* next - begin */
-                $('.quiz-next').click((e) => {
-                    e.preventDefault();
+                /* rollback - begin */
+                const rollback = (specific) => {
+                    let card = '.card';
 
-                    swiper.slideNext();
-                });
-                /* next - e n d */
+                    if (specific && _.inRange(specific, 0, 6)) {
+                        card += `[data-index="${specific}"]`;
+                    }
 
-                /* done, wrong - begin */
-                $('.quiz-done, .wrong').click((e) => {
-                    e.preventDefault();
+                    $(`${card}`).removeClass('solved');
+
+                    $(`${card} .middle .problem .question`).text('question');
+
+                    $(`${card} .middle .decision .solution .explanation ul li.content`).text('explanation');
+                    $(`${card} .middle .decision .promotion .product img:first-child`).prop('src', 'img/product/shower-gel.png');
+                    $(`${card} .middle .decision .promotion .product img:last-child`).prop('src', 'img/product/intense-curl-cream.png');
+
+                    $(`${card} .middle .decision .answer`).removeClass('tw-hidden');
+                    $(`${card} .middle .decision .solution`).addClass('tw-hidden');
+                    $(`${card} .middle .decision .solution .state .wrong`).removeClass('tw-hidden');
+                    $(`${card} .middle .decision .solution .state .correct`).addClass('tw-hidden');
+                    $(`${card} .middle .decision .promotion`).addClass('tw-hidden');
+
+                    $(`${card} .middle .decision .solution .confirm`).addClass('tw-hidden');
+                    // $(`${card} .middle .decision .solution .state label`).addClass('reset');
+
+                    $.each($cards, (_cardIndex, _card) => {
+                        $(_card)
+                            .find('.middle .condition ul li')
+                            .eq(_cardIndex - 1)
+                            .removeClass('tw-bg-gray-50 tw-border-app')
+                            .addClass('tw-border-solved');
+                    });
+                };
+                /* rollback - e n d */
+
+                /* initialize - begin */
+                const initialize = () => {
+                    if (TESTABLE) {
+                        $('.testable').removeClass('tw-hidden');
+                    } else {
+                        $('.testable').addClass('tw-hidden');
+                    }
+
+                    rollback();
+
+                    generate().then((response) => {
+                        questions = response;
+
+                        render();
+                    });
+                };
+                /* initialize - e n d */
+
+                //// 퀴즈 wrapper
+                let $card;
+
+                //// 질문 wrapper
+                let $problem;
+                //// 질문
+                let $question;
+                //// 질문 data
+                let $data;
+
+                //// 대답 wrapper
+                let $decision;
+                //// 대답 버튼 wrapper
+                let $answer;
+                //// 대답 결과 wrapper
+                let $solution;
+                //// 상품 이미지 wrapper
+                let $promotion;
+
+                //// 정답 상태 불렛 wrapper
+                let $condition;
+
+                //// 결과 (오 답 ! or 정 답 !)
+                let $wrong;
+                let $correct;
+                //// 설명
+                let $explanation;
+                let $content;
+                //// 다음
+                let $confirm;
+                let $next;
+
+                /* define - begin */
+                const define = (e) => {
+                    const $button = $(e.target);
+
+                    //// 퀴즈 wrapper
+                    $card = $button.closest('.card');
+
+                    //// 질문 wrapper
+                    $problem = $card.find('.middle .problem');
+                    //// 질문
+                    $question = $problem.find('.question');
+                    //// 질문 data
+                    $data = $question.find('.data');
+
+                    //// 대답 wrapper
+                    $decision = $card.find('.middle .decision');
+                    //// 대답 버튼 wrapper
+                    $answer = $decision.find('.answer');
+                    //// 대답 결과 wrapper
+                    $solution = $decision.find('.solution');
+                    //// 상품 이미지 wrapper
+                    $promotion = $decision.find('.promotion');
+
+                    //// 정답 상태 불렛 wrapper
+                    $condition = $card.find('.middle .condition');
+
+                    //// 결과 (오 답 ! or 정 답 !)
+                    $wrong = $solution.find('.state .wrong');
+                    $correct = $solution.find('.state .correct');
+                    //// 설명
+                    $explanation = $solution.find('.explanation');
+                    $content = $explanation.find('ul li.content');
+                    //// 다음
+                    $confirm = $solution.find('.confirm');
+                    $next = $confirm.find('.next');
+                };
+                /* define - e n d */
+
+                /* answer - begin */
+                $('.middle .decision .answer button').click((e) => {
+                    //// 선택한 대답 버튼
+                    const $button = $(e.target);
+
+                    define(e);
+
+                    const index = $card.data('index');
+                    const q = questions[index];
 
                     setTimeout(() => {
-                        $('.front').removeClass('hidden');
-                        $('.back').addClass('hidden');
-                        $('.products').removeClass('hidden');
+                        const answer = $button.hasClass('yes');
+                        const solved = q.answer === answer;
 
-                        generate();
-                        render();
+                        $content.text(q.explanation);
 
-                        swiper.slideTo(0);
+                        //// required
+                        $answer.addClass('tw-hidden');
+                        $solution.removeClass('tw-hidden');
+                        $promotion.addClass('tw-hidden');
+
+                        if (solved) {
+                            $card.addClass('solved');
+                            $wrong.addClass('tw-hidden');
+                            $correct.removeClass('tw-hidden');
+                            $confirm.removeClass('tw-hidden');
+
+                            $condition
+                                .find('ul li')
+                                .eq(swiperRealIndex - 1)
+                                .removeClass('tw-bg-gray-50 tw-border-app')
+                                .addClass('tw-bg-solved tw-border-solved');
+                        } else {
+                            $wrong.removeClass('tw-hidden');
+                            $correct.addClass('tw-hidden');
+
+                            if (!_.isEmpty(q.explanation)) {
+                                $explanation.removeClass('tw-hidden');
+                            }
+                        }
                     }, 200);
                 });
-                /* done - e n d */
-
-                /* result - begin */
-                $('.buttons button').on('click', (e) => {
-                    const $elem = $(e.target);
-                    const currentQuestion = questions[swiperRealIndex];
-                    const currentAnswer = $elem.hasClass('o');
-
-                    const $answer = $elem.closest('.answer');
-                    const $front = $answer.find('.front');
-                    const $back = $answer.find('.back');
-
-                    $front.addClass('hidden');
-                    $back.removeClass('hidden');
-
-                    if (currentQuestion.answer === currentAnswer) {
-                        $back.find('.result.x').addClass('hidden');
-                        $back.find('.result.o').removeClass('hidden');
-                    } else {
-                        $back.find('.result.o').addClass('hidden');
-                        $back.find('.result.x').removeClass('hidden');
-                    }
-                });
-                /* result - e n d */
+                /* answer - e n d */
 
                 /* xxx - begin */
                 /* xxx - e n d */
 
-                generate();
-                render();
+                /* move to previous or next - begin */
+                $('.previous').click((e) => {
+                    e.preventDefault();
+
+                    swiper.slidePrev(500, () => {});
+                });
+
+                $('.next').click((e) => {
+                    e.preventDefault();
+
+                    swiper.slideNext(500, () => {});
+                });
+
+                $('.card:not(.solved) .reset').click((e) => {
+                    e.preventDefault();
+
+                    initialize();
+
+                    swiper.slideTo(0, 500, () => {});
+                });
+                /* move to next - e n d */
+
+                /* xxx - begin */
+                /* xxx - e n d */
+
+                initialize();
             });
         </script>
     </body>
