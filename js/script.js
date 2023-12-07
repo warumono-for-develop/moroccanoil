@@ -10,7 +10,8 @@ tailwind.config = {
                 '2xl': '1536px',
             },
             colors: {
-                app: '#02C3C2',
+                // app: '#02C3C2',
+                app: '#d387cd',
                 correct: '#02C3C2',
                 wrong: '#F68534',
                 solved: '#F68534',
