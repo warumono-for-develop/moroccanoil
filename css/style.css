@@ -166,3 +166,14 @@ body {
 /* Landscape */
 @media (max-device-width: 1280px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
 }
+
+.downer {
+    position: relative;
+    bottom: 18px;
+    border-top-left-radius: 500px 20px;
+    border-top-right-radius: 500px 20px;
+    border-bottom: none;
+    border-left: none;
+    border-right: none;
+    border-color: red;
+}
