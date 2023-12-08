@@ -152,12 +152,6 @@ body {
     animation: blink 1s step-end infinite;
 }
 
-.capitalize-first::first-letter {
-    text-transform: uppercase;
-}
-
-/* layout for test and develop */
-
 /* ----------- Galaxy Tab S ----------- */
 
 /* Portrait and Landscape */

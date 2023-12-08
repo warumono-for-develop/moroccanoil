@@ -17,7 +17,7 @@
 
                 -->
                 <div class="swiper-slide">
-                    <!-- <div class="swiper-slide" style="background-image: url(docs/layout-intro.png); background-size: cover"> -->
+                    <!-- <div class="swiper-slide tw-opacity-50" style="background-image: url(docs/layout-intro.png); background-size: cover"> -->
                     <div class="card tw-grid tw-grid-rows-[2.5rem_auto_10%] tw-w-full tw-h-full tw-px-[2rem] tw-bg-app" data-index="0">
                         <div class="top tw-flex tw-justify-center tw-items-center C-O-N-T-R-O-L---------- tw-bg-blue--200"></div>
                         <div class="middle tw-grid tw-grid-rows-[16rem_auto_29%] tw-w-full tw-h-full tw-border-app">
@@ -33,7 +33,6 @@
                                 <label class="tw-font-bold tw-text-app tw-text-[4.5rem]">
                                     <span class="tw-relative tw-bottom-[1rem]">모로칸오일 OX 퀴즈</span>
                                 </label>
-                                <label class="testable tw-absolute tw-top-[55%] tw-left-[45%] tw-font-medium tw-text-red-500 tw-text-3xl tw-px-5 tw-py-1 tw-text-center tw-font-poppins blink C-O-N-T-R-O-L---------- tw-hidden">T E S T</label>
                             </div>
                             <div class="tw-rounded-b-2xl tw-bg-white C-O-N-T-R-O-L---------- tw-bg-yellow--600">
                                 <button type="button" class="next tw-font-bold tw-rounded-[1.2rem] tw-text-[3.5rem] tw-px-[3rem] tw-py-1 tw-text-center tw-bg-app">문제 풀기</button>
@@ -58,11 +57,11 @@
 
                 -->
                 <div class="swiper-slide 111">
-                    <!-- <div class="swiper-slide" style="background-image: url(docs/layout-product.png); background-size: cover"> -->
-                    <!-- <div class="swiper-slide" style="background-image: url(docs/layout-wrong.png); background-size: cover"> -->
+                    <!-- <div class="swiper-slide tw-opacity-50" style="background-image: url(docs/layout-product.png); background-size: cover"> -->
+                    <!-- <div class="swiper-slide tw-opacity-50" style="background-image: url(docs/layout-wrong.png); background-size: cover"> -->
                     <div class="card tw-grid tw-grid-rows-[6.3rem_auto_10%] tw-w-full tw-h-full tw-px-[2rem] tw-bg-app" data-index="1">
                         <div class="top tw-flex tw-justify-center tw-items-center C-O-N-T-R-O-L---------- tw-bg-blue--200">
-                            <label class="tw-text-bold tw-font-bold tw-text-[3rem]">모로칸오일 OX 퀴즈<span class="testable tw-absolute tw-top-[0.8%] tw-left-[68%] tw-text-red-500 tw-font-poppins blink C-O-N-T-R-O-L---------- tw-hidden">T E S T</span></label>
+                            <label class="tw-text-bold tw-font-bold tw-text-[3rem]">모로칸오일 OX 퀴즈<span class="testable tw-absolute tw-top-[2%] tw-left-[70%] tw-text-red-500 tw-font-poppins blink C-O-N-T-R-O-L---------- tw-hidden">T E S T</span></label>
                         </div>
                         <div class="middle tw-grid tw-grid-rows-[auto_20rem_5%] tw-w-full tw-h-full">
                             <div class="problem tw-flex tw-justify-center tw-items-center tw-px-[10rem] tw-rounded-t-2xl tw-bg-white C-O-N-T-R-O-L---------- tw-bg-yellow--200">
@@ -90,14 +89,15 @@
                                             <div class="state tw-flex tw-justify-center tw-items-end tw-rounded-t-2xl tw-bg-gray--200">
                                                 <label class="wrong reset tw-m-0 tw-p-0 tw-text-bold tw-font-bold tw-text-[3rem] tw-text-wrong C-O-N-T-R-O-L---------- tw-hidden">오답!</label>
                                                 <label class="correct tw-m-0 tw-p-0 tw-text-bold tw-font-bold tw-text-[3rem] tw-text-correct C-O-N-T-R-O-L---------- tw--hidden">정답!</label>
+                                                <button type="button" class="testable rollback tw-absolute tw-right-[4rem] tw-rounded-[1rem] tw-text-[1rem] tw-px-[1rem] tw-py-1 tw-text-center tw-rounded-2xl tw-font-poppins tw-bg-red-500 tw-border-2 tw-border-red-300 C-O-N-T-R-O-L---------- tw--hidden">ROLLBACK</button>
                                             </div>
-                                            <div class="explanation tw-flex tw-justify-center tw-items-center tw-w-full tw-px-[7rem] C-O-N-T-R-O-L---------- tw-bg-gray--400 tw-hidden">
-                                                <div class="tw-text-correct tw-text-[2.2rem]">
-                                                    <span class="tw-font-bold tw-text-[3rem]">정답 :&nbsp;</span>
-                                                    <span class="content">explanation</span>
+                                            <div class="explanation tw-flex tw-justify-center tw-items-center tw-w-full tw-px-[1rem] C-O-N-T-R-O-L---------- tw-bg-gray--400 tw--hidden">
+                                                <div class="empty tw-text-correct tw-text-[1.8rem] C-O-N-T-R-O-L---------- tw-bg-sky--200 tw--hidden">
+                                                    <span class="tw-font-bold tw-text-[3rem] C-O-N-T-R-O-L---------- tw-bg-lime--400 tw--hidden">정답 :&nbsp;</span>
+                                                    <span class="content C-O-N-T-R-O-L---------- tw-bg-lime--600 tw--hidden">explanation</span>
                                                 </div>
                                             </div>
-                                            <div class="confirm tw-rounded-b-2xl C-O-N-T-R-O-L---------- tw-bg-blue--600 tw-hidden">
+                                            <div class="confirm tw-rounded-b-2xl C-O-N-T-R-O-L---------- tw-bg-blue--600 tw--hidden">
                                                 <button type="button" class="next tw-font-bold tw-rounded-[1.2rem] tw-text-[2rem] tw-px-[3rem] tw-py-1 tw-text-center tw-rounded-2xl tw-bg-wrong C-O-N-T-R-O-L---------- tw--hidden">다음</button>
                                             </div>
                                         </div>
@@ -132,11 +132,11 @@
 
                 -->
                 <div class="swiper-slide 222">
-                    <!-- <div class="swiper-slide" style="background-image: url(docs/layout-product.png); background-size: cover"> -->
-                    <!-- <div class="swiper-slide" style="background-image: url(docs/layout-wrong.png); background-size: cover"> -->
+                    <!-- <div class="swiper-slide tw-opacity-50" style="background-image: url(docs/layout-product.png); background-size: cover"> -->
+                    <!-- <div class="swiper-slide tw-opacity-50" style="background-image: url(docs/layout-wrong.png); background-size: cover"> -->
                     <div class="card tw-grid tw-grid-rows-[6.3rem_auto_10%] tw-w-full tw-h-full tw-px-[2rem] tw-bg-app" data-index="2">
                         <div class="top tw-flex tw-justify-center tw-items-center C-O-N-T-R-O-L---------- tw-bg-blue--200">
-                            <label class="tw-text-bold tw-font-bold tw-text-[3rem]">모로칸오일 OX 퀴즈<span class="testable tw-absolute tw-top-[0.8%] tw-left-[68%] tw-text-red-500 tw-font-poppins blink C-O-N-T-R-O-L---------- tw-hidden">T E S T</span></label>
+                            <label class="tw-text-bold tw-font-bold tw-text-[3rem]">모로칸오일 OX 퀴즈<span class="testable tw-absolute tw-top-[2%] tw-left-[70%] tw-text-red-500 tw-font-poppins blink C-O-N-T-R-O-L---------- tw-hidden">T E S T</span></label>
                         </div>
                         <div class="middle tw-grid tw-grid-rows-[auto_20rem_5%] tw-w-full tw-h-full">
                             <div class="problem tw-flex tw-justify-center tw-items-center tw-px-[10rem] tw-rounded-t-2xl tw-bg-white C-O-N-T-R-O-L---------- tw-bg-yellow--200">
@@ -164,16 +164,16 @@
                                             <div class="state tw-flex tw-justify-center tw-items-end tw-rounded-t-2xl tw-bg-gray--200">
                                                 <label class="wrong reset tw-m-0 tw-p-0 tw-text-bold tw-font-bold tw-text-[3rem] tw-text-wrong C-O-N-T-R-O-L---------- tw-hidden">오답!</label>
                                                 <label class="correct tw-m-0 tw-p-0 tw-text-bold tw-font-bold tw-text-[3rem] tw-text-correct C-O-N-T-R-O-L---------- tw--hidden">정답!</label>
+                                                <button type="button" class="testable rollback tw-absolute tw-right-[4rem] tw-rounded-[1rem] tw-text-[1rem] tw-px-[1rem] tw-py-1 tw-text-center tw-rounded-2xl tw-font-poppins tw-bg-red-500 tw-border-2 tw-border-red-300 C-O-N-T-R-O-L---------- tw--hidden">ROLLBACK</button>
                                             </div>
-                                            <div class="explanation tw-flex tw-justify-center tw-items-center tw-w-full tw-px-[7rem] C-O-N-T-R-O-L---------- tw-bg-gray--400 tw-hidden">
-                                                <div class="tw-text-correct tw-text-[2.2rem]">
-                                                    <span class="tw-font-bold tw-text-[3rem]">정답 :&nbsp;</span>
-                                                    <span class="content">explanation</span>
+                                            <div class="explanation tw-flex tw-justify-center tw-items-center tw-w-full tw-px-[1rem] C-O-N-T-R-O-L---------- tw-bg-gray--400 tw--hidden">
+                                                <div class="empty tw-text-correct tw-text-[1.8rem] C-O-N-T-R-O-L---------- tw-bg-sky--200 tw--hidden">
+                                                    <span class="tw-font-bold tw-text-[3rem] C-O-N-T-R-O-L---------- tw-bg-lime--400 tw--hidden">정답 :&nbsp;</span>
+                                                    <span class="content C-O-N-T-R-O-L---------- tw-bg-lime--600 tw--hidden">explanation</span>
                                                 </div>
                                             </div>
-                                            <div class="confirm tw-rounded-b-2xl C-O-N-T-R-O-L---------- tw-bg-blue--600 tw-hidden">
+                                            <div class="confirm tw-rounded-b-2xl C-O-N-T-R-O-L---------- tw-bg-blue--600 tw--hidden">
                                                 <button type="button" class="next tw-font-bold tw-rounded-[1.2rem] tw-text-[2rem] tw-px-[3rem] tw-py-1 tw-text-center tw-rounded-2xl tw-bg-wrong C-O-N-T-R-O-L---------- tw--hidden">다음</button>
-                                                <button type="button" class="reset tw-font-medium tw-rounded-2xl tw-text-xl tw-px-5 tw-py-1 tw-text-center tw-bg-wrong C-O-N-T-R-O-L---------- tw-hidden">다 시 하 기</button>
                                             </div>
                                         </div>
                                     </div>
@@ -207,11 +207,11 @@
 
                 -->
                 <div class="swiper-slide 333">
-                    <!-- <div class="swiper-slide" style="background-image: url(docs/layout-product.png); background-size: cover"> -->
-                    <!-- <div class="swiper-slide" style="background-image: url(docs/layout-wrong.png); background-size: cover"> -->
+                    <!-- <div class="swiper-slide tw-opacity-50" style="background-image: url(docs/layout-product.png); background-size: cover"> -->
+                    <!-- <div class="swiper-slide tw-opacity-50" style="background-image: url(docs/layout-wrong.png); background-size: cover"> -->
                     <div class="card tw-grid tw-grid-rows-[6.3rem_auto_10%] tw-w-full tw-h-full tw-px-[2rem] tw-bg-app" data-index="3">
                         <div class="top tw-flex tw-justify-center tw-items-center C-O-N-T-R-O-L---------- tw-bg-blue--200">
-                            <label class="tw-text-bold tw-font-bold tw-text-[3rem]">모로칸오일 OX 퀴즈<span class="testable tw-absolute tw-top-[0.8%] tw-left-[68%] tw-text-red-500 tw-font-poppins blink C-O-N-T-R-O-L---------- tw-hidden">T E S T</span></label>
+                            <label class="tw-text-bold tw-font-bold tw-text-[3rem]">모로칸오일 OX 퀴즈<span class="testable tw-absolute tw-top-[2%] tw-left-[70%] tw-text-red-500 tw-font-poppins blink C-O-N-T-R-O-L---------- tw-hidden">T E S T</span></label>
                         </div>
                         <div class="middle tw-grid tw-grid-rows-[auto_20rem_5%] tw-w-full tw-h-full">
                             <div class="problem tw-flex tw-justify-center tw-items-center tw-px-[10rem] tw-rounded-t-2xl tw-bg-white C-O-N-T-R-O-L---------- tw-bg-yellow--200">
@@ -239,16 +239,16 @@
                                             <div class="state tw-flex tw-justify-center tw-items-end tw-rounded-t-2xl tw-bg-gray--200">
                                                 <label class="wrong reset tw-m-0 tw-p-0 tw-text-bold tw-font-bold tw-text-[3rem] tw-text-wrong C-O-N-T-R-O-L---------- tw-hidden">오답!</label>
                                                 <label class="correct tw-m-0 tw-p-0 tw-text-bold tw-font-bold tw-text-[3rem] tw-text-correct C-O-N-T-R-O-L---------- tw--hidden">정답!</label>
+                                                <button type="button" class="testable rollback tw-absolute tw-right-[4rem] tw-rounded-[1rem] tw-text-[1rem] tw-px-[1rem] tw-py-1 tw-text-center tw-rounded-2xl tw-font-poppins tw-bg-red-500 tw-border-2 tw-border-red-300 C-O-N-T-R-O-L---------- tw--hidden">ROLLBACK</button>
                                             </div>
-                                            <div class="explanation tw-flex tw-justify-center tw-items-center tw-w-full tw-px-[7rem] C-O-N-T-R-O-L---------- tw-bg-gray--400 tw-hidden">
-                                                <div class="tw-text-correct tw-text-[2.2rem]">
-                                                    <span class="tw-font-bold tw-text-[3rem]">정답 :&nbsp;</span>
-                                                    <span class="content">explanation</span>
+                                            <div class="explanation tw-flex tw-justify-center tw-items-center tw-w-full tw-px-[1rem] C-O-N-T-R-O-L---------- tw-bg-gray--400 tw--hidden">
+                                                <div class="empty tw-text-correct tw-text-[1.8rem] C-O-N-T-R-O-L---------- tw-bg-sky--200 tw--hidden">
+                                                    <span class="tw-font-bold tw-text-[3rem] C-O-N-T-R-O-L---------- tw-bg-lime--400 tw--hidden">정답 :&nbsp;</span>
+                                                    <span class="content C-O-N-T-R-O-L---------- tw-bg-lime--600 tw--hidden">explanation</span>
                                                 </div>
                                             </div>
-                                            <div class="confirm tw-rounded-b-2xl C-O-N-T-R-O-L---------- tw-bg-blue--600 tw-hidden">
+                                            <div class="confirm tw-rounded-b-2xl C-O-N-T-R-O-L---------- tw-bg-blue--600 tw--hidden">
                                                 <button type="button" class="next tw-font-bold tw-rounded-[1.2rem] tw-text-[2rem] tw-px-[3rem] tw-py-1 tw-text-center tw-rounded-2xl tw-bg-wrong C-O-N-T-R-O-L---------- tw--hidden">다음</button>
-                                                <button type="button" class="reset tw-font-medium tw-rounded-2xl tw-text-xl tw-px-5 tw-py-1 tw-text-center tw-bg-wrong C-O-N-T-R-O-L---------- tw-hidden">다 시 하 기</button>
                                             </div>
                                         </div>
                                     </div>
@@ -282,11 +282,11 @@
 
                 -->
                 <div class="swiper-slide 444">
-                    <!-- <div class="swiper-slide" style="background-image: url(docs/layout-product.png); background-size: cover"> -->
-                    <!-- <div class="swiper-slide" style="background-image: url(docs/layout-wrong.png); background-size: cover"> -->
+                    <!-- <div class="swiper-slide tw-opacity-50" style="background-image: url(docs/layout-product.png); background-size: cover"> -->
+                    <!-- <div class="swiper-slide tw-opacity-50" style="background-image: url(docs/layout-wrong.png); background-size: cover"> -->
                     <div class="card tw-grid tw-grid-rows-[6.3rem_auto_10%] tw-w-full tw-h-full tw-px-[2rem] tw-bg-app" data-index="4">
                         <div class="top tw-flex tw-justify-center tw-items-center C-O-N-T-R-O-L---------- tw-bg-blue--200">
-                            <label class="tw-text-bold tw-font-bold tw-text-[3rem]">모로칸오일 OX 퀴즈<span class="testable tw-absolute tw-top-[0.8%] tw-left-[68%] tw-text-red-500 tw-font-poppins blink C-O-N-T-R-O-L---------- tw-hidden">T E S T</span></label>
+                            <label class="tw-text-bold tw-font-bold tw-text-[3rem]">모로칸오일 OX 퀴즈<span class="testable tw-absolute tw-top-[2%] tw-left-[70%] tw-text-red-500 tw-font-poppins blink C-O-N-T-R-O-L---------- tw-hidden">T E S T</span></label>
                         </div>
                         <div class="middle tw-grid tw-grid-rows-[auto_20rem_5%] tw-w-full tw-h-full">
                             <div class="problem tw-flex tw-justify-center tw-items-center tw-px-[10rem] tw-rounded-t-2xl tw-bg-white C-O-N-T-R-O-L---------- tw-bg-yellow--200">
@@ -314,16 +314,16 @@
                                             <div class="state tw-flex tw-justify-center tw-items-end tw-rounded-t-2xl tw-bg-gray--200">
                                                 <label class="wrong reset tw-m-0 tw-p-0 tw-text-bold tw-font-bold tw-text-[3rem] tw-text-wrong C-O-N-T-R-O-L---------- tw-hidden">오답!</label>
                                                 <label class="correct tw-m-0 tw-p-0 tw-text-bold tw-font-bold tw-text-[3rem] tw-text-correct C-O-N-T-R-O-L---------- tw--hidden">정답!</label>
+                                                <button type="button" class="testable rollback tw-absolute tw-right-[4rem] tw-rounded-[1rem] tw-text-[1rem] tw-px-[1rem] tw-py-1 tw-text-center tw-rounded-2xl tw-font-poppins tw-bg-red-500 tw-border-2 tw-border-red-300 C-O-N-T-R-O-L---------- tw--hidden">ROLLBACK</button>
                                             </div>
-                                            <div class="explanation tw-flex tw-justify-center tw-items-center tw-w-full tw-px-[7rem] C-O-N-T-R-O-L---------- tw-bg-gray--400 tw-hidden">
-                                                <div class="tw-text-correct tw-text-[2.2rem]">
-                                                    <span class="tw-font-bold tw-text-[3rem]">정답 :&nbsp;</span>
-                                                    <span class="content">explanation</span>
+                                            <div class="explanation tw-flex tw-justify-center tw-items-center tw-w-full tw-px-[1rem] C-O-N-T-R-O-L---------- tw-bg-gray--400 tw--hidden">
+                                                <div class="empty tw-text-correct tw-text-[1.8rem] C-O-N-T-R-O-L---------- tw-bg-sky--200 tw--hidden">
+                                                    <span class="tw-font-bold tw-text-[3rem] C-O-N-T-R-O-L---------- tw-bg-lime--400 tw--hidden">정답 :&nbsp;</span>
+                                                    <span class="content C-O-N-T-R-O-L---------- tw-bg-lime--600 tw--hidden">explanation</span>
                                                 </div>
                                             </div>
-                                            <div class="confirm tw-rounded-b-2xl C-O-N-T-R-O-L---------- tw-bg-blue--600 tw-hidden">
+                                            <div class="confirm tw-rounded-b-2xl C-O-N-T-R-O-L---------- tw-bg-blue--600 tw--hidden">
                                                 <button type="button" class="next tw-font-bold tw-rounded-[1.2rem] tw-text-[2rem] tw-px-[3rem] tw-py-1 tw-text-center tw-rounded-2xl tw-bg-wrong C-O-N-T-R-O-L---------- tw--hidden">다음</button>
-                                                <button type="button" class="reset tw-font-medium tw-rounded-2xl tw-text-xl tw-px-5 tw-py-1 tw-text-center tw-bg-wrong C-O-N-T-R-O-L---------- tw-hidden">다 시 하 기</button>
                                             </div>
                                         </div>
                                     </div>
@@ -357,11 +357,11 @@
 
                 -->
                 <div class="swiper-slide 555">
-                    <!-- <div class="swiper-slide" style="background-image: url(docs/layout-product.png); background-size: cover"> -->
-                    <!-- <div class="swiper-slide" style="background-image: url(docs/layout-wrong.png); background-size: cover"> -->
+                    <!-- <div class="swiper-slide tw-opacity-50" style="background-image: url(docs/layout-product.png); background-size: cover"> -->
+                    <!-- <div class="swiper-slide tw-opacity-50" style="background-image: url(docs/layout-wrong.png); background-size: cover"> -->
                     <div class="card tw-grid tw-grid-rows-[6.3rem_auto_10%] tw-w-full tw-h-full tw-px-[2rem] tw-bg-app" data-index="5">
                         <div class="top tw-flex tw-justify-center tw-items-center C-O-N-T-R-O-L---------- tw-bg-blue--200">
-                            <label class="tw-text-bold tw-font-bold tw-text-[3rem]">모로칸오일 OX 퀴즈<span class="testable tw-absolute tw-top-[0.8%] tw-left-[68%] tw-text-red-500 tw-font-poppins blink C-O-N-T-R-O-L---------- tw-hidden">T E S T</span></label>
+                            <label class="tw-text-bold tw-font-bold tw-text-[3rem]">모로칸오일 OX 퀴즈<span class="testable tw-absolute tw-top-[2%] tw-left-[70%] tw-text-red-500 tw-font-poppins blink C-O-N-T-R-O-L---------- tw-hidden">T E S T</span></label>
                         </div>
                         <div class="middle tw-grid tw-grid-rows-[auto_20rem_5%] tw-w-full tw-h-full">
                             <div class="problem tw-flex tw-justify-center tw-items-center tw-px-[10rem] tw-rounded-t-2xl tw-bg-white C-O-N-T-R-O-L---------- tw-bg-yellow--200">
@@ -389,16 +389,17 @@
                                             <div class="state tw-flex tw-justify-center tw-items-end tw-rounded-t-2xl tw-bg-gray--200">
                                                 <label class="wrong reset tw-m-0 tw-p-0 tw-text-bold tw-font-bold tw-text-[3rem] tw-text-wrong C-O-N-T-R-O-L---------- tw-hidden">오답!</label>
                                                 <label class="correct tw-m-0 tw-p-0 tw-text-bold tw-font-bold tw-text-[3rem] tw-text-correct C-O-N-T-R-O-L---------- tw--hidden">정답!</label>
+                                                <button type="button" class="testable rollback tw-absolute tw-right-[4rem] tw-rounded-[1rem] tw-text-[1rem] tw-px-[1rem] tw-py-1 tw-text-center tw-rounded-2xl tw-font-poppins tw-bg-red-500 tw-border-2 tw-border-red-300 C-O-N-T-R-O-L---------- tw--hidden">ROLLBACK</button>
                                             </div>
-                                            <div class="explanation tw-flex tw-justify-center tw-items-center tw-w-full tw-px-[7rem] C-O-N-T-R-O-L---------- tw-bg-gray--400 tw-hidden">
-                                                <div class="tw-text-correct tw-text-[2.2rem]">
-                                                    <span class="tw-font-bold tw-text-[3rem]">정답 :&nbsp;</span>
-                                                    <span class="content">explanation</span>
+                                            <div class="explanation tw-flex tw-justify-center tw-items-center tw-w-full tw-px-[1rem] C-O-N-T-R-O-L---------- tw-bg-gray--400 tw--hidden">
+                                                <div class="empty tw-text-correct tw-text-[1.8rem] C-O-N-T-R-O-L---------- tw-bg-sky--200 tw--hidden">
+                                                    <span class="tw-font-bold tw-text-[3rem] C-O-N-T-R-O-L---------- tw-bg-lime--400 tw--hidden">정답 :&nbsp;</span>
+                                                    <span class="content C-O-N-T-R-O-L---------- tw-bg-lime--600 tw--hidden">explanation</span>
                                                 </div>
                                             </div>
-                                            <div class="confirm tw-rounded-b-2xl C-O-N-T-R-O-L---------- tw-bg-blue--600 tw-hidden">
+                                            <div class="confirm tw-rounded-b-2xl C-O-N-T-R-O-L---------- tw-bg-blue--600 tw--hidden">
                                                 <button type="button" class="next tw-font-bold tw-rounded-[1.2rem] tw-text-[2rem] tw-px-[3rem] tw-py-1 tw-text-center tw-rounded-2xl tw-bg-wrong C-O-N-T-R-O-L---------- tw--hidden">다음</button>
-                                                <button type="button" class="reset tw-font-medium tw-rounded-2xl tw-text-xl tw-px-5 tw-py-1 tw-text-center tw-bg-wrong C-O-N-T-R-O-L---------- tw-hidden">다 시 하 기</button>
+                                                <button type="button" class="reset tw-font-bold tw-rounded-[1.2rem] tw-text-[2rem] tw-px-[3rem] tw-py-1 tw-text-center tw-rounded-2xl tw-bg-wrong C-O-N-T-R-O-L---------- tw-hidden">다시 풀기</button>
                                             </div>
                                         </div>
                                     </div>
@@ -463,8 +464,8 @@
 
                 //// two images & has a explanation - identifier 14
                 //// =====> SPECIFIC = 2, (swiperjs options) initialSlide: 4
-                const TESTABLE = true;
-                const SPECIFIC = 0; //// if TESTABLE is true then selectable 0 ~ 7
+                const TESTABLE = false;
+                const SPECIFIC = 1; //// if TESTABLE is true then selectable 0 ~ 7
                 const JSONABLE = false; //// if TESTABLE is true then print json object
 
                 const QUIZ_COUNT = 5;
@@ -551,13 +552,19 @@
                                 $(card).find('.middle .problem .question').text(q.question);
                             }
 
-                            if (TESTABLE && JSONABLE) {
-                                $(card).find('.middle .problem .question').text(JSON.stringify(q, null, 2));
-                                $(card).find('.middle .problem .question').addClass('tw-text-xs tw-text-blue-500');
+                            if (TESTABLE) {
+                                $(card)
+                                    .find(`.middle .decision .answer ${q.answer ? 'span.yes' : 'span.no'}`)
+                                    .addClass('blink');
+
+                                if (JSONABLE) {
+                                    $(card).find('.middle .problem .question').text(JSON.stringify(q, null, 2));
+                                    $(card).find('.middle .problem .question').addClass('tw-text-xs tw-text-blue-500');
+                                }
                             }
 
                             // $(card).find('.middle .decision .solution .explanation ul li.content').text(q.explanation);
-                            $(card).find('.middle .decision .solution .explanation .content').text(q.explanation);
+                            $(card).find('.middle .decision .solution .explanation .empty .content').text(q.explanation);
 
                             if (_.isEmpty(q.image)) {
                                 $(card).find('.promotion').addClass('tw-hidden');
@@ -604,7 +611,9 @@
                     $(`${card} .middle .decision .solution .state .correct`).addClass('tw-hidden');
                     $(`${card} .middle .decision .promotion`).removeClass('tw-hidden');
 
-                    $(`${card} .middle .decision .solution .confirm`).addClass('tw-hidden');
+                    // $(`${card} .middle .decision .solution .confirm`).addClass('tw-hidden');
+                    $(`${card} .middle .decision .solution .confirm .next`).addClass('tw-hidden');
+                    $(`${card} .middle .decision .solution .confirm .reset`).addClass('tw-hidden');
 
                     $.each($cards, (_cardIndex, _card) => {
                         $(_card)
@@ -624,8 +633,8 @@
                         $('.testable').addClass('tw-hidden');
                     }
 
-                    /*
-                    rollback();
+                    //*
+                    rollback(); //// rrr
                     /*/
                     //// required close when layout work !!!
                     //*/
@@ -665,10 +674,12 @@
                 let $correct;
                 //// 설명
                 let $explanation;
+                let $empty;
                 let $content;
                 //// 다음
                 let $confirm;
                 let $next;
+                let $reset;
 
                 /* define - begin */
                 const define = (e) => {
@@ -701,10 +712,12 @@
                     $correct = $solution.find('.state .correct');
                     //// 설명
                     $explanation = $solution.find('.explanation');
-                    $content = $explanation.find('ul li.content');
+                    $empty = $explanation.find('.empty');
+                    $content = $explanation.find('.empty .content');
                     //// 다음
                     $confirm = $solution.find('.confirm');
                     $next = $confirm.find('.next');
+                    $reset = $confirm.find('.reset');
                 };
                 /* define - e n d */
 
@@ -722,18 +735,27 @@
                         const answer = $button.hasClass('yes');
                         const solved = q.answer === answer;
 
-                        // $content.text(q.explanation);
-
                         //// required
                         $answer.addClass('tw-hidden');
                         $solution.removeClass('tw-hidden');
                         $promotion.addClass('tw-hidden');
 
+                        if (_.isEmpty(q.explanation)) {
+                            $empty.addClass('tw-hidden');
+                        }
+
                         if (solved) {
                             $card.addClass('solved');
                             $wrong.addClass('tw-hidden');
                             $correct.removeClass('tw-hidden');
-                            $confirm.removeClass('tw-hidden');
+
+                            if (index < _.size(questions) - 1) {
+                                //// last quiz has not next
+                                // $confirm.removeClass('tw-hidden');
+                                $next.removeClass('tw-hidden');
+                            } else {
+                                $reset.removeClass('tw-hidden');
+                            }
 
                             $condition
                                 .find('ul li')
@@ -743,10 +765,6 @@
                         } else {
                             $wrong.removeClass('tw-hidden');
                             $correct.addClass('tw-hidden');
-
-                            if (!_.isEmpty(q.explanation)) {
-                                $explanation.removeClass('tw-hidden');
-                            }
                         }
                     }, 200);
                 });
@@ -767,7 +785,9 @@
 
                     swiper.slideNext(500, () => {});
                 });
+                /* move to previos or next - e n d */
 
+                /* rollback all - begin */
                 $('.card:not(.solved) .reset').click((e) => {
                     e.preventDefault();
 
@@ -775,10 +795,16 @@
 
                     swiper.slideTo(0, 500, () => {});
                 });
-                /* move to next - e n d */
+                /* rollback all - e n d */
 
-                /* fullscreen - begin */
-                /* fullscreen - e n d */
+                /* rollback specific - begin */
+                $('.rollback').click((e) => {
+                    e.preventDefault();
+
+                    // swiper.slideNext(500, () => {});
+                    rollback($(e.target).closest('.card').data('index'));
+                });
+                /* rollback specific - e n d */
 
                 /* xxx - begin */
                 /* xxx - e n d */
