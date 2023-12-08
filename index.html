@@ -53,7 +53,7 @@
                         <div class="middle tw-grid tw-grid-rows-[16rem_auto_29%] tw-w-full tw-h-full tw-border-app">
                             <!-- <div class="xxx tw-w-full"></div> -->
                             <div class="tw-flex tw-justify-center tw-items-end tw-border-x-[1rem] tw-border-white tw-rounded-t-2xl tw-bg-white C-O-N-T-R-O-L---------- tw-bg-yellow--200">
-                                <button type="button" class="no tw-w-[10rem] tw-mx-1 tw-h-[10rem] tw-text-[8rem] tw-text-wrong tw-border-solid tw-border-4 tw-border-wrong tw-rounded-full" disabled>
+                                <button type="button" class="no tw-w-[10rem] tw-mx-1 tw-h-[10rem] tw-text-[8rem] tw-text-correct tw-border-solid tw-border-4 tw-border-correct tw-rounded-full" disabled>
                                     <span class="tw-relative tw-bottom-[1.1rem]">O</span>
                                 </button>
                                 <button type="button" class="no tw-w-[10rem] tw-mx-1 tw-h-[10rem] tw-text-[6rem] tw-text-wrong tw-border-solid tw-border-4 tw-border-wrong tw-rounded-full" disabled>
@@ -64,7 +64,7 @@
                                 <label class="tw-font-bold tw-text-app tw-text-[4.5rem]">
                                     <span class="tw-relative tw-bottom-[1rem]">모로칸오일 OX 퀴즈</span>
                                 </label>
-                                <label class="testable tw-absolute tw-top-[40%] tw-left-[40%] tw-font-medium tw-text-red-500 tw-text-3xl tw-px-5 tw-py-1 tw-text-center tw-font-poppins blink C-O-N-T-R-O-L---------- tw-hidden">T E S T</label>
+                                <label class="testable tw-absolute tw-top-[55%] tw-left-[45%] tw-font-medium tw-text-red-500 tw-text-3xl tw-px-5 tw-py-1 tw-text-center tw-font-poppins blink C-O-N-T-R-O-L---------- tw-hidden">T E S T</label>
                             </div>
                             <div class="tw-rounded-b-2xl tw-bg-white C-O-N-T-R-O-L---------- tw-bg-yellow--600">
                                 <button type="button" class="next tw-font-bold tw-rounded-[1.2rem] lg:tw-text-[3.5rem] tw-px-[3rem] tw-py-1 tw-text-center tw-bg-app">문제 풀기</button>
@@ -89,29 +89,34 @@
                     :::::::::::::::::::: 1 - begin ::::::::::::::::::::
 
                 -->
-                <div class="swiper-slide">
-                    <div class="card tw-grid tw-grid-rows-[10%_auto_10%] tw-w-screen tw-h-screen tw-bg-app" data-index="1">
+                <!-- <div class="swiper-slide"> -->
+                <div class="swiper-slide" style="background-image: url(docs/layout-quiz.png); background-size: cover">
+                    <div class="card tw-grid tw-grid-rows-[6.3rem_auto_10%] tw-w-full tw-h-full tw-px-[2rem] tw-bg-app" data-index="2">
                         <div class="top tw-flex tw-justify-center tw-items-center C-O-N-T-R-O-L---------- tw-bg-blue--200">
-                            <!-- <div class="testable previous tw-absolute tw-left-0 tw-p-4 tw-cursor-pointer C-O-N-T-R-O-L---------- tw--hidden">
+                            <div class="testable previous tw-absolute tw-left-0 tw-p-4 tw-cursor-pointer C-O-N-T-R-O-L---------- tw--hidden">
                                 <svg xmlns="http://www.w3.org/2000/svg" height="16" width="14" viewBox="0 0 448 512">
                                     <path fill="#ffffff" d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z" />
                                 </svg>
-                            </div> -->
-                            <label class="tw-text-2xl">모로칸오일 OX 퀴즈 <span class="testable tw-absolute tw-top-[0.8%] tw-left-[68%] tw-text-red-500 tw-font-poppins blink C-O-N-T-R-O-L---------- tw-hidden">T E S T</span></label>
+                            </div>
+                            <label class="tw-text-bold tw-font-bold tw-text-[3rem]">모로칸오일 OX 퀴즈 <span class="testable tw-absolute tw-top-[0.8%] tw-left-[68%] tw-text-red-500 tw-font-poppins blink C-O-N-T-R-O-L---------- tw-hidden">T E S T</span></label>
                             <div class="testable next tw-absolute tw-right-0 tw-p-4 tw-cursor-pointer C-O-N-T-R-O-L---------- tw--hidden">
                                 <svg xmlns="http://www.w3.org/2000/svg" height="16" width="14" viewBox="0 0 448 512">
                                     <path fill="#ffffff" d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z" />
                                 </svg>
                             </div>
                         </div>
-                        <div class="middle tw-flex tw-flex-col tw-border-x-[1rem] tw-border-app">
-                            <div class="problem tw-flex-1 tw-flex tw-justify-center tw-items-center tw-rounded-t-2xl tw-p-4 tw-text-app tw-font-bold tw-bg-white C-O-N-T-R-O-L---------- tw-bg-yellow--200">
-                                <p class="question">problem</p>
+                        <div class="middle tw-grid tw-grid-rows-[12rem_auto_5%] tw-w-full tw-h-full">
+                            <div class="problem tw-flex tw-justify-center tw-items-center tw-rounded-t-2xl tw-bg-white C-O-N-T-R-O-L---------- tw-bg-yellow-200">
+                                <p class="question tw-text-app tw-font-bold tw-text-[2rem]">problem</p>
                             </div>
-                            <div class="decision tw-flex-auto tw-flex tw-items-center tw-border-x-[1rem] tw-border-white tw-bg-white C-O-N-T-R-O-L---------- tw-bg-yellow--400">
-                                <div class="answer tw-flex-1 tw-flex tw-justify-around C-O-N-T-R-O-L---------- tw--hidden">
-                                    <button type="button" class="yes tw-w-[5.5rem] tw-h-[5.5rem] tw-text-[3.3rem] tw-text-correct tw-border-solid tw-border-4 tw-border-correct tw-rounded-full">O</button>
-                                    <button type="button" class="no tw-w-[5.5rem] tw-h-[5.5rem] tw-text-[3.3rem] tw-text-wrong tw-border-solid tw-border-4 tw-border-wrong tw-rounded-full">X</button>
+                            <div class="decision tw-flex tw-items-center tw-bg-white C-O-N-T-R-O-L---------- tw-bg-yellow-400">
+                                <div class="answer tw-flex-1 tw-flex tw-justify-around tw-px-[11rem] C-O-N-T-R-O-L---------- tw--hidden">
+                                    <button type="button" class="yes tw-w-[11rem] tw-mx-1 tw-h-[11rem] tw-text-[9rem] tw-text-wrong tw-border-solid tw-border-4 tw-border-wrong tw-rounded-full">
+                                        <span class="tw-relative tw-bottom-[1.2rem]">O</span>
+                                    </button>
+                                    <button type="button" class="no tw-w-[11rem] tw-mx-1 tw-h-[11rem] tw-text-[9rem] tw-text-wrong tw-border-solid tw-border-4 tw-border-wrong tw-rounded-full">
+                                        <span class="tw-relative tw-bottom-[1.2rem]">X</span>
+                                    </button>
                                 </div>
                                 <div class="solution tw-flex-1 tw-grid tw-grid-rows-[25%_auto_25%] tw-border-2 tw-border-app tw-rounded-2xl tw-w-full tw-h-full C-O-N-T-R-O-L---------- tw-hidden">
                                     <div class="state tw-flex tw-justify-center tw-items-center tw-rounded-t-2xl tw-bg-gray--200">
@@ -136,29 +141,26 @@
                                     </figure>
                                 </div>
                             </div>
-                            <div class="condition tw-flex-1 tw-flex tw-justify-center tw-items-end tw-rounded-b-2xl tw-bg-white C-O-N-T-R-O-L---------- tw-bg-yellow--600">
-                                <ul class="tw-flex tw-justify-between tw-items-end tw-pb-1">
-                                    <li class="tw-bg-gray-50 tw-w-[3.3rem] tw-mx-1 tw-py-0.5 tw-rounded-xl tw-border tw-border-solved"></li>
-                                    <li class="tw-bg-gray-50 tw-w-[3.3rem] tw-mx-1 tw-py-0.5 tw-rounded-xl tw-border tw-border-app"></li>
-                                    <li class="tw-bg-gray-50 tw-w-[3.3rem] tw-mx-1 tw-py-0.5 tw-rounded-xl tw-border tw-border-app"></li>
-                                    <li class="tw-bg-gray-50 tw-w-[3.3rem] tw-mx-1 tw-py-0.5 tw-rounded-xl tw-border tw-border-app"></li>
-                                    <li class="tw-bg-gray-50 tw-w-[3.3rem] tw-mx-1 tw-py-0.5 tw-rounded-xl tw-border tw-border-app"></li>
+                            <div class="condition tw-px-[6.8rem] tw-rounded-b-2xl tw-bg-white C-O-N-T-R-O-L---------- tw-bg-yellow-600">
+                                <ul class="tw-grid tw-grid-cols-5 tw-gap-x-2">
+                                    <li class="tw-bg-solved tw-py-1 tw-rounded-xl tw-border tw-border-solved"></li>
+                                    <li class="tw-bg-gray-50 tw-py-1 tw-rounded-xl tw-border tw-border-solved"></li>
+                                    <li class="tw-bg-gray-50 tw-py-1 tw-rounded-xl tw-border tw-border-app"></li>
+                                    <li class="tw-bg-gray-50 tw-py-1 tw-rounded-xl tw-border tw-border-app"></li>
+                                    <li class="tw-bg-gray-50 tw-py-1 tw-rounded-xl tw-border tw-border-app"></li>
                                 </ul>
                             </div>
                         </div>
-                        <div class="bottom tw-flex tw-justify-center tw-items-center C-O-N-T-R-O-L---------- tw-bg-blue--600">
+                        <!-- <div class="bottom tw-flex tw-justify-center tw-items-center C-O-N-T-R-O-L---------- tw-bg-blue--600">
                             <figure class="tw-flex tw-justify-center">
                                 <img class="tw-h-3" src="img/logo.png" alt="moroccanoil" />
                             </figure>
-                        </div>
-                        <!--
-                        <div class="promotion tw-absolute tw-flex tw-justify-end tw-bottom-[4.6rem] tw-w-full tw-bg-sky-600 tw--hidden">
-                            <figure class="product tw-flex tw-justify-end tw-w-[13%] tw-px-2">
-                                <img class="tw-bg-no-repeat" src="img/product/shower-gel.png" alt="moroccanoil product" />
-                                <img class="tw-bg-no-repeat tw-ml-1 tw--hidden" src="img/product/intense-curl-cream.png" alt="moroccanoil product" />
+                        </div> -->
+                        <div class="bottom tw-flex tw-justify-center tw-items-center C-O-N-T-R-O-L---------- tw-bg-blue--600">
+                            <figure>
+                                <img class="tw-h-[1.7rem]" src="img/logo.png" alt="moroccanoil" />
                             </figure>
                         </div>
-                        -->
                     </div>
                 </div>
                 <!--
@@ -603,7 +605,7 @@
                 console.info(ascii);
 
                 const TESTABLE = true;
-                const SPECIFIC = 7; //// if TESTABLE is true then selectable 0 ~ 7
+                const SPECIFIC = 0; //// if TESTABLE is true then selectable 0 ~ 7
                 const JSONABLE = false; //// if TESTABLE is true then print json object
 
                 const QUIZ_COUNT = 5;
@@ -613,6 +615,7 @@
 
                 const swiper = new Swiper('.swiper-container', {
                     allowTouchMove: TESTABLE,
+                    initialSlide: 1,
                     slidesPerView: 1,
                     paginationClickable: true,
                     parallax: false,
@@ -670,7 +673,8 @@
                             if (TESTABLE) {
                                 $(card)
                                     .find('.middle .problem .question')
-                                    .text(q.question + '' + '' + '' + '' + '' + '' + '' + '' + ` [i:${q.identifier}][a:${q.answer}][e:${!_.isEmpty(q.explanation)}][${_.size(q.image)}]`);
+                                    // .text(q.question + '' + '' + '' + '' + '' + '' + '' + '' + ` [i:${q.identifier}][a:${q.answer}][e:${!_.isEmpty(q.explanation)}][${_.size(q.image)}]`);
+                                    .text(q.question);
                             } else {
                                 $(card).find('.middle .problem .question').text(q.question);
                             }
