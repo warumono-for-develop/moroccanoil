@@ -677,18 +677,7 @@
                         if (index > 0 && q.identifier > 0) {
                             const $question = $(card).find('.middle .problem .question');
 
-                            // if (TESTABLE) {
-                            //     $(card)
-                            //         // .find('.middle .problem .question')
-                            //         .find('.quiz .data')
-                            //         //*
-                            //         .text(JSON.stringify(q, null, 4));
-                            //     /*/
-                            //         .text(q.question);
-                            //     //*/
-                            // } else {
                             $(card).find('.middle .problem .question').text(q.question);
-                            // }
 
                             if (TESTABLE) {
                                 $(card)
@@ -726,9 +715,9 @@
                     let card = '.card';
 
                     // console.info(`specific ::: ${specific}`);
-                    if (specific && _.inRange(specific, 1, 6)) {
-                        card += `[data-index="${specific}"]`;
-                    }
+                    // if (specific && _.inRange(specific, 1, 6)) {
+                    //     card += `[data-index="${specific}"]`;
+                    // }
 
                     $(`${card}`).removeClass('solved');
 
@@ -751,11 +740,15 @@
                     $(`${card} .middle .decision .solution .confirm .sorry`).addClass('tw-hidden');
 
                     $.each($cards, (_cardIndex, _card) => {
-                        $(_card)
-                            .find('.middle .condition ul li')
-                            .eq(_cardIndex - 1)
-                            .removeClass('tw-bg-gray-50 tw-border-app')
-                            .addClass('tw-border-solved');
+                        if ($(_card).hasClass('begin') || $(_card).hasClass('final')) {
+                            ////
+                        } else {
+                            $(_card)
+                                .find('.middle .condition ul li')
+                                .eq(_cardIndex - 1)
+                                .removeClass('tw-bg-solved tw-border-app')
+                                .addClass('tw-bg-gray-50 tw-border-solved');
+                        }
                     });
                 };
                 /* rollback - e n d */
@@ -892,8 +885,6 @@
                             $card.addClass('solved');
                             $wrong.addClass('tw-hidden');
                             $correct.removeClass('tw-hidden');
-
-                            console.info(index, QUIZ_COUNT, index < QUIZ_COUNT);
 
                             if (index < QUIZ_COUNT) {
                                 //// last quiz has not next
