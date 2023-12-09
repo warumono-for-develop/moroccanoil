@@ -429,7 +429,12 @@
                 -->
             </div>
             <div class="testable pagination tw-absolute tw-top-[2rem] tw-flex tw-justify-between tw-items-start tw-w-full C-O-N-T-R-O-L---------- tw-bg-blue--200">
-                <div class="previous tw-fixed tw-top-0 tw-p-4 tw-cursor-pointer tw-z-999 C-O-N-T-R-O-L---------- tw--hidden">
+                <div class="preferences tw-fixed tw-top-0 tw-p-4 tw-cursor-pointer tw-z-999 W-H-E-N----------intro C-O-N-T-R-O-L---------- tw--hidden">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="16" width="16" viewBox="0 0 512 512">
+                        <path fill="#ffffff" d="M0 416c0 17.7 14.3 32 32 32l54.7 0c12.3 28.3 40.5 48 73.3 48s61-19.7 73.3-48L480 448c17.7 0 32-14.3 32-32s-14.3-32-32-32l-246.7 0c-12.3-28.3-40.5-48-73.3-48s-61 19.7-73.3 48L32 384c-17.7 0-32 14.3-32 32zm128 0a32 32 0 1 1 64 0 32 32 0 1 1 -64 0zM320 256a32 32 0 1 1 64 0 32 32 0 1 1 -64 0zm32-80c-32.8 0-61 19.7-73.3 48L32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l246.7 0c12.3 28.3 40.5 48 73.3 48s61-19.7 73.3-48l54.7 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-54.7 0c-12.3-28.3-40.5-48-73.3-48zM192 128a32 32 0 1 1 0-64 32 32 0 1 1 0 64zm73.3-64C253 35.7 224.8 16 192 16s-61 19.7-73.3 48L32 64C14.3 64 0 78.3 0 96s14.3 32 32 32l86.7 0c12.3 28.3 40.5 48 73.3 48s61-19.7 73.3-48L480 128c17.7 0 32-14.3 32-32s-14.3-32-32-32L265.3 64z" />
+                    </svg>
+                </div>
+                <div class="previous tw-fixed tw-top-0 tw-p-4 tw-cursor-pointer tw-z-999 W-H-E-N----------quiz C-O-N-T-R-O-L---------- tw-hidden">
                     <svg xmlns="http://www.w3.org/2000/svg" height="16" width="14" viewBox="0 0 448 512">
                         <path fill="#ffffff" d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z" />
                     </svg>
@@ -464,20 +469,25 @@
 
                 //// two images & has a explanation - identifier 14
                 //// =====> SPECIFIC = 2, (swiperjs options) initialSlide: 4
-                const TESTABLE = false;
-                const SPECIFIC = 1; //// if TESTABLE is true then selectable 0 ~ 7
+                const TESTABLE = true;
+                const SPECIFIC = undefined; //// if TESTABLE is true then selectable 0 ~ 7
                 const JSONABLE = false; //// if TESTABLE is true then print json object
 
                 const QUIZ_COUNT = 5;
+
+                /* observe - begin */
+                const model = { swiperRealIndex: 0 };
+                const state = observable(model);
+                /* observe model - e n d */
 
                 /* swiper - begin */
                 let swiperRealIndex = 0;
 
                 const swiper = new Swiper('.swiper-container', {
                     allowTouchMove: TESTABLE,
-                    // initialSlide: 1 /* <------------------------------ TESTABLE !!! */,
+                    initialSlide: !TESTABLE ? 0 : 0,
                     slidesPerView: 1,
-                    paginationClickable: true,
+                    paginationClickable: TESTABLE,
                     parallax: false,
                     autoplay: false,
                     keyboard: false,
@@ -487,15 +497,14 @@
                         el: '.pagination-bullet',
                         type: 'bullets',
                         clickable: true,
-                        // dynamicBullets: true,
-                        // dynamicMainBullets: 3,
                         renderBullet: function (index, className) {
-                            return `<span class="${className}">${index}</span>`;
+                            return `<span class="${className}"> ${index} </span>`;
                         },
                     },
                     on: {
                         activeIndexChange: function () {
                             swiperRealIndex = this.realIndex;
+                            state.swiperRealIndex = swiperRealIndex;
                         },
                     },
                 });
@@ -503,6 +512,7 @@
 
                 /* generate questions - begin */
                 let questions = [];
+                let questionsRealCount = 0;
 
                 //// specific - for test : 0 ~ 7
                 const generate = () => {
@@ -593,6 +603,7 @@
                 const rollback = (specific) => {
                     let card = '.card';
 
+                    console.info(`specific ::: ${specific}`);
                     if (specific && _.inRange(specific, 0, 6)) {
                         card += `[data-index="${specific}"]`;
                     }
@@ -601,7 +612,8 @@
 
                     $(`${card} .middle .problem .question`).text('question');
 
-                    $(`${card} .middle .decision .solution .explanation ul li.content`).text('explanation');
+                    $(`${card} .middle .decision .solution .explanation .content`).text('explanation');
+
                     $(`${card} .middle .decision .promotion .product img:first-child`).prop('src', 'img/product/shower-gel.png');
                     $(`${card} .middle .decision .promotion .product img:last-child`).prop('src', 'img/product/intense-curl-cream.png');
 
@@ -633,17 +645,20 @@
                         $('.testable').addClass('tw-hidden');
                     }
 
+                    swiperRealIndex = 0;
+
+                    generate().then((response) => {
+                        questions = response;
+                        questionsRealCount = _.size(questions);
+
+                        render();
+                    });
+
                     //*
                     rollback(); //// rrr
                     /*/
                     //// required close when layout work !!!
                     //*/
-
-                    generate().then((response) => {
-                        questions = response;
-
-                        render();
-                    });
                 };
                 /* initialize - e n d */
 
@@ -791,7 +806,7 @@
                 $('.card:not(.solved) .reset').click((e) => {
                     e.preventDefault();
 
-                    initialize();
+                    // initialize();
 
                     swiper.slideTo(0, 500, () => {});
                 });
@@ -809,7 +824,17 @@
                 /* xxx - begin */
                 /* xxx - e n d */
 
-                initialize();
+                // initialize();
+
+                /* observe - begin */
+                observe(() => {
+                    console.warn(`A swiperRealIndex= ${state.swiperRealIndex}`);
+
+                    if (0 === state.swiperRealIndex) {
+                        initialize();
+                    }
+                });
+                /* observe - e n d */
             });
         </script>
     </body>
