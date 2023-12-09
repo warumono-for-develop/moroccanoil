@@ -486,7 +486,26 @@
                 :::::::::::::::::::: logo - e n d ::::::::::::::::::::
 
             -->
-            <!-- -->
+            <!--
+
+                :::::::::::::::::::: data - begin ::::::::::::::::::::
+
+            -->
+            <div class="testable quiz tw-absolute tw-left-[50%] tw-top-[3rem] -tw-translate-x-1/2 tw-flex tw-justify-center tw-items-center tw-z-999 tw-w-full tw-p-[0.5rem] tw-opacity-60 C-O-N-T-R-O-L---------- tw-bg-yellow-400 tw--hidden">
+                <div class="tw-flex tw-justify-center tw-items-center tw-w-[95%] tw-bg-sky-200 tw-rounded-2xl">
+                    <pre class="data tw-font-bold tw-text-lg tw-w-[90%] tw-text-gray-600 tw-whitespace-pre-wrap">quiz data</pre>
+                </div>
+            </div>
+            <!--
+
+                :::::::::::::::::::: data - e n d ::::::::::::::::::::
+
+            -->
+            <!--
+
+                :::::::::::::::::::: pagination - begin ::::::::::::::::::::
+
+            -->
             <div class="testable pagination tw-absolute tw-top-[2rem] tw-flex tw-justify-between tw-items-start tw-w-full C-O-N-T-R-O-L---------- tw-bg-blue--200 tw-hidden">
                 <div class="preferences tw-fixed tw-top-0 tw-p-4 tw-cursor-pointer tw-z-999 W-H-E-N----------intro C-O-N-T-R-O-L---------- tw--hidden">
                     <svg xmlns="http://www.w3.org/2000/svg" height="16" width="16" viewBox="0 0 512 512">
@@ -505,6 +524,11 @@
                     </svg>
                 </div>
             </div>
+            <!--
+
+                :::::::::::::::::::: pagination - e n d ::::::::::::::::::::
+
+            -->
         </div>
 
         <script src="https://code.jquery.com/jquery-latest.min.js"></script>
@@ -531,7 +555,7 @@
                 //// two images & has a explanation - identifier 14
                 //// =====> SPECIFIC = 2, (swiperjs options) initialSlide: 4
                 //// ttt
-                /*
+                //*
                 const TESTABLE = false;
                 /*/
                 const TESTABLE = true;
@@ -542,6 +566,12 @@
                 const QUIZ_COUNT = 5;
 
                 /* swiper - begin */
+                const $quizData = $('.quiz .data');
+
+                const $paginationPreferences = $('.pagination .preferences');
+                const $paginationPrevious = $('.pagination .previous');
+                const $paginationNext = $('.pagination .next');
+
                 let swiperRealIndex = 0;
 
                 const swiper = new Swiper('.swiper-container', {
@@ -565,6 +595,35 @@
                     on: {
                         activeIndexChange: function () {
                             swiperRealIndex = this.realIndex;
+
+                            if (TESTABLE) {
+                                if (0 === swiperRealIndex) {
+                                    $paginationPreferences.removeClass('tw-hidden');
+
+                                    $paginationPreferences.removeClass('bounceOutLeft');
+                                    $paginationPrevious.removeClass('bounceInLeft');
+
+                                    $paginationPrevious.addClass('bounceOutLeft');
+                                    $paginationPreferences.addClass('bounceInLeft');
+                                } else if (QUIZ_COUNT + 1 === swiperRealIndex) {
+                                    $paginationNext.addClass('bounceOutRight');
+                                } else {
+                                    $quizData.text(JSON.stringify(questions[swiperRealIndex], undefined, 2));
+
+                                    $paginationPrevious.removeClass('tw-hidden');
+
+                                    $paginationPrevious.removeClass('bounceOutLeft');
+                                    $paginationPreferences.removeClass('bounceInLeft');
+
+                                    $paginationPreferences.addClass('bounceOutLeft');
+                                    $paginationPrevious.addClass('bounceInLeft');
+
+                                    if ($paginationNext.hasClass('bounceOutRight')) {
+                                        $paginationNext.removeClass('bounceOutRight');
+                                        $paginationNext.addClass('bounceInRight');
+                                    }
+                                }
+                            }
                         },
                     },
                 });
@@ -618,17 +677,18 @@
                         if (index > 0 && q.identifier > 0) {
                             const $question = $(card).find('.middle .problem .question');
 
-                            if (TESTABLE) {
-                                $(card)
-                                    .find('.middle .problem .question')
-                                    //*
-                                    .text(q.question + '' + '' + '' + '' + '' + '' + '' + '' + ` [i:${q.identifier}][a:${q.answer}][e:${!_.isEmpty(q.explanation)}][${_.size(q.image)}]`);
-                                /*/
-                                    .text(q.question);
-                                //*/
-                            } else {
-                                $(card).find('.middle .problem .question').text(q.question);
-                            }
+                            // if (TESTABLE) {
+                            //     $(card)
+                            //         // .find('.middle .problem .question')
+                            //         .find('.quiz .data')
+                            //         //*
+                            //         .text(JSON.stringify(q, null, 4));
+                            //     /*/
+                            //         .text(q.question);
+                            //     //*/
+                            // } else {
+                            $(card).find('.middle .problem .question').text(q.question);
+                            // }
 
                             if (TESTABLE) {
                                 $(card)
