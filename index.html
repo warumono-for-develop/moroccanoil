@@ -441,24 +441,20 @@
                         <div class="top tw-flex tw-justify-center tw-items-center C-O-N-T-R-O-L---------- tw-bg-blue--200"></div>
                         <div class="middle tw-grid tw-grid-rows-[16rem_auto_29%] tw-w-full tw-h-full tw-border-app">
                             <div class="tw-flex tw-justify-center tw-items-end tw-border-x-[1rem] tw-border-white tw-rounded-t-2xl tw-bg-white C-O-N-T-R-O-L---------- tw-bg-yellow--200">
-                                <!-- <button type="button" class="no tw-w-[10rem] tw-mx-1 tw-h-[10rem] tw-text-[8rem] tw-text-correct tw-border-solid tw-border-4 tw-border-correct tw-rounded-full" disabled>
-                                    <span class="tw-relative tw-bottom-[1.1rem]">O</span>
-                                </button>
-                                <button type="button" class="no tw-w-[10rem] tw-mx-1 tw-h-[10rem] tw-text-[6rem] tw-text-wrong tw-border-solid tw-border-4 tw-border-wrong tw-rounded-full" disabled>
-                                    <span class="tw-relative">X</span>
-                                </button> -->
-                                <label class="tw-font-extrabold tw-text-app tw-text-[5.5rem]">
+                                <label class="reset tw-font-extrabold tw-text-app tw-text-[5.5rem]">
                                     <span class="tw-relative tw-bottom-[1rem]">축 하 합 니 다</span>
                                 </label>
                             </div>
                             <div class="tw-bg-white C-O-N-T-R-O-L---------- tw-bg-yellow--400">
+                                <label class="tw-font-medium tw-text-app tw-text-[1.5rem] tw-text-wrong">
+                                    <p class="tw-relative tw-bottom-[1rem]">앞으로도 모로칸오일에 많은 관심과 성원 부탁드립니다.</p>
+                                </label>
+                            </div>
+                            <div class="tw-rounded-b-2xl tw-bg-white C-O-N-T-R-O-L---------- tw-bg-yellow--600">
                                 <label class="tw-font-bold tw-text-app tw-text-[2.5rem]">
                                     <p class="tw-relative tw-bottom-[1rem]">모로칸오일 OX 퀴즈에</p>
                                     <p class="tw-relative tw-bottom-[1rem]">참여해주셔서 감사합니다.</p>
                                 </label>
-                            </div>
-                            <div class="tw-rounded-b-2xl tw-bg-white C-O-N-T-R-O-L---------- tw-bg-yellow--600">
-                                <button type="button" class="reset tw-font-bold tw-rounded-[1.2rem] tw-text-[3.5rem] tw-px-[3rem] tw-py-1 tw-text-center tw-bg-app">다시 하기</button>
                             </div>
                         </div>
                         <div class="bottom tw-flex tw-justify-center tw-items-center C-O-N-T-R-O-L---------- tw-bg-blue--600">
@@ -560,7 +556,6 @@
 
                 /* generate questions - begin */
                 let questions = [];
-                let questionsRealCount = 0;
 
                 //// specific - for test : 0 ~ 7
                 const generate = () => {
@@ -654,7 +649,7 @@
                 const rollback = (specific) => {
                     let card = '.card';
 
-                    console.info(`specific ::: ${specific}`);
+                    // console.info(`specific ::: ${specific}`);
                     if (specific && _.inRange(specific, 1, 6)) {
                         card += `[data-index="${specific}"]`;
                     }
@@ -701,7 +696,6 @@
 
                     generate().then((response) => {
                         questions = response;
-                        questionsRealCount = _.size(questions);
 
                         render();
                     });
@@ -823,12 +817,19 @@
                             $wrong.addClass('tw-hidden');
                             $correct.removeClass('tw-hidden');
 
-                            if (index < questionsRealCount) {
+                            console.info(index, QUIZ_COUNT, index < QUIZ_COUNT);
+
+                            if (index < QUIZ_COUNT) {
                                 //// last quiz has not next
                                 // $confirm.removeClass('tw-hidden');
                                 $next.removeClass('tw-hidden');
-                            } else {
+                                // } else {
                                 // $reset.removeClass('tw-hidden');
+                            } else {
+                                //// automatic move to congratulation
+                                setTimeout(() => {
+                                    swiper.slideNext(500, () => {});
+                                }, 1000);
                             }
 
                             $condition
