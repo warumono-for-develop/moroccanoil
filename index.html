@@ -509,7 +509,7 @@
 
                 //// two images & has a explanation - identifier 14
                 //// =====> SPECIFIC = 2, (swiperjs options) initialSlide: 4
-                const TESTABLE = true;
+                const TESTABLE = false;
                 const SPECIFIC = 2; //// if TESTABLE is true then selectable 0 ~ 7
                 const JSONABLE = false; //// if TESTABLE is true then print json object
 
@@ -697,11 +697,14 @@
                         render();
                     });
 
-                    //*
-                    rollback(); //// rrr
-                    /*/
-                    //// required close when layout work !!!
-                    //*/
+                    if (TESTABLE) {
+                        ////
+                        console.warn('This is TEST mode! Cannot use the `rollback`!!!');
+                    } else {
+                        //// required close when layout work !!!
+                        //// rrr
+                        rollback();
+                    }
                 };
                 /* initialize - e n d */
 
