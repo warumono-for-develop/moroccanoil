@@ -99,7 +99,7 @@ tailwind.config = {
 
 //// max group by 'product' : 1 over
 //// specifics - choose quiz identifiers : [1, 2, 3, 4, 5]
-const generateQuzzes = (quantity, specifics) => {
+const generateQuizzes = (quantity, specifics) => {
     if (!quantity || quantity < 1) {
         quantity = 1;
     }
@@ -116,45 +116,4 @@ const generateQuzzes = (quantity, specifics) => {
     }
 
     return _.chain(quizzes).groupBy('product').sampleSize(quantity).flatten().shuffle().sampleSize(quantity).value();
-};
-
-/* observe design pattern */
-//// https://www.woong-jae.com/post/observer-pattern
-/*
-const state = observable({ a: 3, b: 3 });
-
-observe(() => console.log(`a + b = ${state.a + state.b}`));
-// -> a + b = 6
-observe(() => console.log(`a * b = ${state.a * state.b}`));
-// -> a * b = 9
-state.a = 5;
-// -> a + b = 8
-// -> a * b = 15
-state.a = 5;
-// 아무것도 출력되지 않는다.
-*/
-let requestingObserver = null;
-
-const observable = (object) => {
-    const observersPerProps = new Map();
-    return new Proxy(object, {
-        get(target, prop) {
-            if (!observersPerProps.has(prop)) observersPerProps.set(prop, new Set());
-            if (requestingObserver) observersPerProps.get(prop).add(requestingObserver);
-            return target[prop];
-        },
-        set(target, prop, val) {
-            if (target[prop] === val) return true;
-            if (JSON.stringify(target[prop]) === JSON.stringify(val)) return true;
-            target[prop] = val;
-            observersPerProps.get(prop).forEach((notify) => notify());
-            return true;
-        },
-    });
-};
-
-const observe = (notify) => {
-    requestingObserver = notify;
-    notify();
-    requestingObserver = null;
 };
