@@ -43,7 +43,7 @@ const quizzes = [
     { identifier: 27, product: '', question: '모로칸오일 핸드워시에는 아르간오일, 히알루론산이 함유되어 세정하는 동안에도 영양을 공급하는 상품이다.', answer: true, explanation: undefined, image: [] },
     { identifier: 28, product: 'shower-gel', question: '모로칸오일 샤워젤 프래그런스 상품은 샤워젤 안에 캡슐형태의 고농축 아르간오일을 함유하고 있다.', answer: false, explanation: '모로칸오일 샤워젤 프래그런스 상품은 샤워젤 안에 캡슐형태는 없지만 아르간오일을 함유하고 있어 샤워시 영양감과 케어에 도움이되는 상품이다.', image: ['shower-gel.png'] },
     { identifier: 29, product: 'shower-gel', question: '모로칸오일 샤워젤 프래그런스 상품은 스크럽효과로 바디 각질제거에 효과적인 상품이다.', answer: false, explanation: '모로칸오일 샤워젤 프래그런스 상품은 스크럽효과는 없지만 샤워 후 수분감과 영양감을 채워주는 상품이다', image: ['shower-gel.png'] },
-    { identifier: 30, product: '', question: '모로칸오일 핸드크림의 주성분으로 아르간오일 ,코코아버터, 시어버터, 히알루론산이 있으며, 실키하고 부드럽게 수분이 유지되도록 도와준다.', answer: true, explanation: undefined, image: [] },
+    { identifier: 30, product: '', question: '모로칸오일 핸드크림의 주성분으로 아르간오일,코코아버터, 시어버터, 히알루론산이 있으며, 실키하고 부드럽게 수분이 유지되도록 도와준다.', answer: true, explanation: undefined, image: [] },
     { identifier: 31, product: '', question: '모로칸오일 시그니처향은 스파이시 앰버, 매그놀리아, 우디 노트의 조합으로 블렌딩 되어있다.', answer: true, explanation: undefined, image: [] },
     { identifier: 32, product: '', question: '모로칸오일 샴푸는 알카리성으로 PH 45 ~ 5 사이이다.', answer: false, explanation: '모로칸오일 샴푸는 약산성성으로 PH 45 ~ 5 사이이다.', image: [] },
     { identifier: 33, product: '', question: '모로칸오일 바디 상품은 지중해 바다, 모래, 부드러운 바람에서 영감을 받았다.', answer: true, explanation: undefined, image: [] },
